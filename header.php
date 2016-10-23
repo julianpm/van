@@ -26,7 +26,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="row">
-				<div class="columns small-1">
+				<div class="columns small-6 small-centered">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</div>
 			</div>
