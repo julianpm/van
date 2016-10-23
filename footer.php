@@ -15,9 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'van' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'van' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'van' ), 'van', '<a href="http://julianmeanchoff.com" rel="designer">Julian</a>' ); ?>
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
