@@ -21,7 +21,7 @@
 						<a href="<?php esc_url( home_url( '/' ) ); ?>">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/van_logo.png" alt="Van Logo">
 						</a>
-						<p>Graphic Design & Art Direction</p>
+						<p><?php esc_html_e( 'Graphic Design & Art Direction', 'van' ); ?></p>
 					</div>
 					<div class="footer-right">
 						<p>lkj</p>
@@ -31,7 +31,7 @@
 					</div>
 				</div>
 				<div class="columns small-12 footer-bottom">
-					<p>&#169;2016 Vandesign. All rights reserved.</p>
+					<p><?php esc_html_e( '&#169;2016 Vandesign. All rights reserved.', 'van' ); ?></p>
 				</div>
 			</div>
 		</div><!-- .site-info -->
