@@ -14,6 +14,9 @@
 	img{
 		width: 60px;
 		margin-right:10px;
+		@include breakpoint(large){
+			width: auto;
+		}
 	}
 }
 
