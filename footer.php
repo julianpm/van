@@ -15,7 +15,25 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			
+			<div class="row">
+				<div class="columns small-12 footer">
+					<div class="footer-left">
+						<a href="<?php esc_url( home_url( '/' ) ); ?>">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/van_logo.png" alt="Van Logo">
+						</a>
+						<p>Graphic Design & Art Direction</p>
+					</div>
+					<div class="footer-right">
+						<p>lkj</p>
+						<p>asd</p>
+						<p>kjf</p>
+						<p>l;j</p>
+					</div>
+				</div>
+				<div class="columns small-12 footer-bottom">
+					<p>&#169;2016 Vandesign. All rights reserved.</p>
+				</div>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
