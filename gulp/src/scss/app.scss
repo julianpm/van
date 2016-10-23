@@ -4,11 +4,8 @@
 @import 'mixins';
 @import 'variables';
 @import 'navigation';
+@import 'footer';
 
 .text-center{
 	text-align: center;
-}
-
-a{
-	color:$lightgrey;
 }

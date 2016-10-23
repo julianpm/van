@@ -1,0 +1,36 @@
+.footer{
+	@include breakpoint(large){
+		display:flex;
+		justify-content:space-between;
+	}
+}
+
+.footer-left, .footer-right{
+	display:flex;
+	align-items:center;
+}
+
+.footer-left{
+	img{
+		width: 60px;
+		margin-right:10px;
+	}
+}
+
+.footer-right{
+	p{
+		margin-left:10px;
+		&:first-of-type{
+			margin-left:0;
+		}
+	}
+}
+
+.footer-bottom{
+	p{
+		@include font-size(14);
+		font-family:'Playfair Display';
+		color:$lightgrey;
+		letter-spacing:1px;
+	}
+}
