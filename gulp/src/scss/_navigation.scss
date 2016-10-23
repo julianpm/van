@@ -1,0 +1,14 @@
+#primary-menu{
+	list-style:none;
+	display: flex;
+	justify-content:space-between;
+	a{
+		text-decoration:none;
+		color:black;
+		transition:0.5s;
+		border-bottom:2px solid transparent;
+		&:hover{
+			border-bottom:2px solid black;
+		}
+	}
+}
