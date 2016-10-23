@@ -1,14 +1,24 @@
+.logo{
+	text-align: center;
+	display: block;
+	margin-top:5%;
+}
+
 #primary-menu{
+	margin:5% 0 0 0;
+	padding:0;
 	list-style:none;
 	display: flex;
 	justify-content:space-between;
 	a{
+		color:$lightgrey;
 		text-decoration:none;
-		color:black;
 		transition:0.5s;
+		padding:2px;
 		border-bottom:2px solid transparent;
 		&:hover{
 			border-bottom:2px solid black;
+			color:black;
 		}
 	}
 }

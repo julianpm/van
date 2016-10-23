@@ -1,8 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400i|Raleway:400,500,700);
 @import 'foundation';
 @import 'font-awesome';
 @import 'mixins';
+@import 'variables';
 @import 'navigation';
 
 .text-center{
 	text-align: center;
+}
+
+a{
+	color:$lightgrey;
 }
