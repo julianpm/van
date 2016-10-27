@@ -1,12 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400i|Raleway:400,500,700);
-@import 'foundation';
-@import 'font-awesome';
-@import 'mixins';
-@import 'variables';
-@import 'typography';
-@import 'navigation';
-@import 'footer';
-
-.text-center{
-	text-align: center;
-}
+@import 'mixins/mixins';
+@import 'variables/variables';
+@import 'foundation/foundation';
+@import 'typography/font-awesome';
+@import 'typography/typography';
+@import 'elements/elements';
+@import 'navigation/navigation';
+@import 'layout/layout';
