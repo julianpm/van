@@ -1,0 +1,15 @@
+body{
+	font-family:'Raleway';
+	font-weight:500;
+	color:$main_black;
+}
+footer{
+	p{
+		@include font-size(14);
+		font-family:'Playfair Display', sans-serif;
+		letter-spacing:1px;
+	}
+}
+.text-center{
+	text-align: center;
+}
