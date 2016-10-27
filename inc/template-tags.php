@@ -120,3 +120,55 @@ function van_category_transient_flusher() {
 }
 add_action( 'edit_category', 'van_category_transient_flusher' );
 add_action( 'save_post',     'van_category_transient_flusher' );
+
+
+// SOCIAL MEDIA OPTIONS (SITE-WIDE)
+function van_social_media() {
+	if ( function_exists( 'get_field') ){
+		$twitter = get_field('van_twitter', 'option');
+		$facebook = get_field('van_facebook', 'option');
+		$tumblr = get_field('van_tumblr', 'option');
+		$instagram = get_field('van_instagram', 'option'); ?>
+
+		<nav class="social-media">
+			<ul>
+				<?php
+				if( $twitter ) { ?>
+					<li>
+						<?php echo '<a href="'. esc_url( $twitter) .'" target="_blank"><i class="fa fa-twitter"></i></a>'; ?>
+					</li>
+				<?php }
+				if( $facebook ) { ?>
+					<li>
+						<?php echo '<a href="'. esc_url( $facebook) .'" target="_blank"><i class="fa fa-facebook"></i></a>'; ?>
+					</li>
+				<?php }
+				if( $tumblr ) { ?>
+					<li>
+						<?php echo '<a href="'. esc_url( $instagram ) .'" target="_blank"><i class="fa fa-tumblr"></i></a>'; ?>
+					</li>
+				<?php }
+				if( $instagram ) { ?>
+					<li>
+						<?php echo '<a href="'. esc_url( $instagram ) .'" target="_blank"><i class="fa fa-instagram"></i></a>'; ?>
+					</li>
+				<?php } ?>
+			</ul>
+		</nav>
+	<?php }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
