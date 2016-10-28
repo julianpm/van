@@ -3,11 +3,28 @@ body{
 	font-weight:500;
 	color:$main_black;
 }
-footer{
+h1{
+	font-weight:600;
+	@include font-size(60);
+}
+.site-footer{
 	p{
 		@include font-size(14);
 		font-family:'Playfair Display', sans-serif;
 		letter-spacing:1px;
+	}
+}
+.front-page-hero{
+	p{
+		width: 70%;
+		font-family:'Playfair Display', sans-serif;
+	}
+	a{
+		color:$main_grey;
+		transition:0.5s;
+		&:hover{
+			color:$main_black;
+		}
 	}
 }
 .text-center{
