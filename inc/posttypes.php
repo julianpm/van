@@ -32,7 +32,6 @@ function van_type_projects() {
     'hierarchical' => false,
     'menu_position' => null,
     'menu_icon' => 'dashicons-clipboard',
-    'taxonomies' => array('pediatric, emergency, adult'),
     'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt')
   ); 
 
