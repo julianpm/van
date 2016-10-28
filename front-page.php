@@ -13,10 +13,15 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) : the_post(); ?>
 
-
-
+				<div class="row">
+					<div class="columns small-12 front-page-hero">
+						<?php the_content(); ?>
+					</div>
+				</div>
+			
+			<?php
 			endwhile; // End of the loop.
 			?>
 
