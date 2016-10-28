@@ -121,6 +121,11 @@ add_action( 'wp_enqueue_scripts', 'van_scripts' );
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * Include Custom Post Types
+ */
+require_once( get_template_directory() . '/inc/posttypes.php' );
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
