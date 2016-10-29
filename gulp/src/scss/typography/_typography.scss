@@ -5,14 +5,12 @@ body{
 }
 h1{
 	font-weight:600;
+	color:white;
+	text-transform:uppercase;
+	margin:0;
 	@include font-size(30);
 	@include breakpoint(large){
 		@include font-size(50);
-	}
-	.page-header &{
-		color:white;
-		text-transform:uppercase;
-		margin:0;
 	}
 }
 p{
