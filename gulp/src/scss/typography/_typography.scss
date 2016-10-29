@@ -17,6 +17,12 @@ p{
 	.front-page-hero &{
 		font-family:'Playfair Display', sans-serif;		
 	}
+	.page-header &{
+		font-family:'Playfair Display', sans-serif;
+		color:white;
+		letter-spacing:1px;
+		margin:0;
+	}
 	.site-footer &{
 		@include font-size(14);
 		font-family:'Playfair Display', sans-serif;

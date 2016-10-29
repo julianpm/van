@@ -128,6 +128,13 @@ function van_page_header(){ ?>
 		<div class="columns small-12">
 			<header class="page-header" style="background-image: url( <?php echo ( has_post_thumbnail() ? wp_get_attachment_url( get_post_thumbnail_id() ) : '' ); ?> ); ">
 				<h1><?php the_title(); ?></h1>
+
+				<?php
+				$page_header_subtitle = get_field( 'van_page_header_subtitle' );
+
+				if ( $page_header_subtitle ){ ?>
+					<p><?php echo esc_html( $page_header_subtitle ); ?></p>
+				<?php } ?>
 			</header>
 		</div>
 	</div>
