@@ -27,7 +27,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		
+		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
 	<!-- <footer class="entry-footer"> -->
