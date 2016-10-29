@@ -20,8 +20,6 @@
 					<p><?php esc_html_e( '&#169;2016 Vandesign. All rights reserved.', 'van' ); ?></p>
 					<?php van_social_media(); ?>
 				</div>
-				<div class="columns small-12 footer-bottom">
-				</div>
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
