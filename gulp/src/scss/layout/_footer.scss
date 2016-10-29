@@ -1,10 +1,19 @@
 .site-footer{
+	padding:10px 0;
 	background: $main_black;
 	color:white;
 	.columns{
-		display:flex;
-		align-items:center;
-		justify-content:space-between;
+		@include breakpoint(large){
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+		}
+		p{
+			margin-bottom:10px;
+			@include breakpoint(large){
+				margin-bottom:0;
+			}
+		}
 	}
 }
 
@@ -21,7 +30,6 @@
 			width: 30px;
 			line-height: 30px;
 			text-align: center;
-			margin:0 5px;
 			a{
 				color:$main_black;
 				width: 100%;
