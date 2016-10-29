@@ -122,6 +122,18 @@ add_action( 'edit_category', 'van_category_transient_flusher' );
 add_action( 'save_post',     'van_category_transient_flusher' );
 
 
+// PAGE HEADER (SITE-WIDE)
+function van_page_header(){ ?>
+	<div class="row">
+		<div class="columns small-12">
+			<header class="page-header" style="background-image: url( <?php echo ( has_post_thumbnail() ? wp_get_attachment_url( get_post_thumbnail_id() ) : '' ); ?> ); ">
+				<h1><?php the_title(); ?></h1>
+			</header>
+		</div>
+	</div>
+<?php }
+
+
 // SOCIAL MEDIA OPTIONS (SITE-WIDE)
 function van_social_media() {
 	if ( function_exists( 'get_field') ){
