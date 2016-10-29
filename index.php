@@ -21,25 +21,36 @@ get_header(); ?>
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				<header class="blog-header">
+					<div class="row">
+						<div class="columns small-12">
+							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+						</div>
+					</div>
 				</header>
 
 			<?php
-			endif;
+			endif; ?>
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			<div class="row">
+				<div class="columns small-12 large-8">
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) : the_post(); ?>
 
-			endwhile;
+							<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
+					<?php
+					endwhile; ?>
+
+				</div>
+				<div class="columns small-12 large-4">	
+					<?php get_sidebar(); ?>
+				</div>
+			</div>
+
+			<?php
 			the_posts_navigation();
 
 		else :
@@ -52,5 +63,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-#get_sidebar();
 get_footer();
