@@ -32,7 +32,7 @@ get_header(); ?>
 			<?php
 			endif; ?>
 
-			<div class="row">
+			<div class="row" id="post-list">
 				<div class="columns small-12 large-8">
 
 					<?php
