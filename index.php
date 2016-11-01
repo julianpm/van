@@ -44,15 +44,15 @@ get_header(); ?>
 					<?php
 					endwhile; ?>
 
+					<?php the_posts_navigation(); ?>
+
 				</div>
 				<div class="columns small-12 large-4">	
 					<?php get_sidebar(); ?>
 				</div>
 			</div>
 
-			<?php
-			the_posts_navigation();
-
+		<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
