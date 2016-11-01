@@ -2,6 +2,9 @@
 	border-bottom:1px solid $secondary_grey;
 	margin-bottom:40px;
 	padding-bottom:40px;
+	&:last-of-type{
+		margin-bottom:0;
+	}
 	a{
 		text-decoration: none;
 	}
@@ -10,6 +13,20 @@
 		a{
 			position:relative;
 			color:$main_black;
+			&::before{
+				content:'';
+				position: absolute;
+				left:0;
+				bottom:-20px;
+				height:2px;
+				width: 50px;
+				border-bottom:2px solid $main_black;
+			}
+		}
+		.single-post &{
+			position:relative;
+			color:$main_black;
+			@include font-size(24);
 			&::before{
 				content:'';
 				position: absolute;
@@ -35,5 +52,17 @@
 		border-bottom:none;
 		margin:0;
 		padding:0;
+	}
+}
+
+.posts-navigation{
+	margin-top:20px;
+	h2{
+		display: none;
+	}
+	a{
+		color:$main_grey;
+		text-decoration: none;
+		font-family:'Playfair Display', sans-serif;
 	}
 }
