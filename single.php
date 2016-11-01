@@ -23,6 +23,7 @@ get_header(); ?>
 
 					endwhile; // End of the loop.
 					?>
+					<?php van_post_navigation(); ?>
 				</div>
 				<div class="columns small-12 large-4">
 					<?php get_sidebar(); ?>

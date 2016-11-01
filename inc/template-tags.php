@@ -122,6 +122,35 @@ add_action( 'edit_category', 'van_category_transient_flusher' );
 add_action( 'save_post',     'van_category_transient_flusher' );
 
 
+/**
+ * Display navigation to next/previous post when applicable.
+ * CUSTOM SINGLE-POST NAVIGATION
+ * TO GO IN TEMPLATE TAGS
+ */
+function van_post_navigation() {
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+	if ( ! $next && ! $previous ) {
+		return;
+	}
+	?>
+	<div class="row">
+		<div class="columns small-12">	
+			<nav class="navigation posts-navigation" role="navigation">
+				<div class="nav-links section-padding">
+					<?php
+						previous_post_link( '<div class="nav-previous">%link</div>', 'Previous Post' );
+						next_post_link( '<div class="nav-next">%link</div>', 'Next Post' );
+					?>
+				</div><!-- .nav-links -->
+			</nav><!-- .navigation -->
+		</div>
+	</div>
+	<?php
+}
+
+
 // PAGE HEADER (SITE-WIDE)
 function van_page_header(){ ?>
 	<div class="row">
