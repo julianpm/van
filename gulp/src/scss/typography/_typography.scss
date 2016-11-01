@@ -30,15 +30,6 @@ p{
 		margin:0;
 	}
 }
-a{
-	.front-page-hero &{
-		color:$main_grey;
-		transition:0.5s;
-		&:hover{
-			color:$main_black;
-		}
-	}
-}
 .section-padding{
 	padding:5% 0;
 	@include breakpoint(large){
