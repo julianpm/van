@@ -28,6 +28,7 @@
 
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
+		<a href="#"><?php echo esc_html( 'READ MORE', 'pso' ); ?></a>
 	</div><!-- .entry-content -->
 
 	<!-- <footer class="entry-footer"> -->
