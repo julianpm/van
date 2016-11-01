@@ -27,7 +27,7 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="row">
 				<div class="columns small-12">
-					<a class="logo" href="<?php esc_url( home_url( '/' ) ); ?>">
+					<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/van-logo.png" alt="Van Logo">
 					</a>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
