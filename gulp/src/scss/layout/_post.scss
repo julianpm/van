@@ -60,9 +60,33 @@
 	h2{
 		display: none;
 	}
-	a{
-		color:$main_grey;
-		text-decoration: none;
-		font-family:'Playfair Display', sans-serif;
+	.nav-links{
+		display:flex;
+		justify-content:space-between;
+		a{
+			color:$main_grey;
+			text-decoration: none;
+			font-family:'Playfair Display', sans-serif;
+		}
+		.nav-previous{
+			a{
+				&::before{
+					font-family:'FontAwesome';
+					content:'\f0d9';
+					margin-right:10px;
+					color:$main_black;
+				}
+			}
+		}
+		.nav-next{
+			a{
+				&::after{
+					font-family:'FontAwesome';
+					content:'\f0da';
+					color:$main_black;
+					margin-left:10px;
+				}
+			}
+		}
 	}
 }
