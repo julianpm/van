@@ -28,7 +28,7 @@
 
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
-		<a href="#"><?php echo esc_html( 'READ MORE', 'pso' ); ?></a>
+		<a class="btn" href="<?php the_permalink(); ?>"><?php echo esc_html( 'read more', 'pso' ); ?></a>
 	</div><!-- .entry-content -->
 
 	<!-- <footer class="entry-footer"> -->
