@@ -1,6 +1,33 @@
 .post{
+	border-bottom:1px solid $main_black;
+	margin-bottom:30px;
 	a{
-		color:$main_black;
 		text-decoration: none;
+	}
+	.entry-title{
+		margin-top:0;
+		a{
+			position:relative;
+			color:$main_black;
+			&::before{
+				content:'';
+				position: absolute;
+				left:0;
+				bottom:-20px;
+				height:2px;
+				width: 50px;
+				border-bottom:2px solid $main_black;
+			}
+		}
+	}
+	.entry-meta{
+		margin-top:35px;
+		font-family:'Playfair Display';
+		color:$main_grey;
+		letter-spacing:1px;
+		a{
+			color: $main_grey;
+			letter-spacing:1px;
+		}
 	}
 }
