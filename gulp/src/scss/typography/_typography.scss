@@ -29,6 +29,22 @@ p{
 		letter-spacing:1px;
 		margin:0;
 	}
+	&.error-404-header{
+		font-weight:bold;
+		margin-top:0;
+		letter-spacing:1px;
+		text-transform:uppercase;
+	}
+	.page-content &{
+		.error-404 &{
+			margin:0;
+			&:last-of-type{
+				font-family:'Playfair Display', sans-serif;
+				letter-spacing:1px;
+				color:$main_grey;
+			}
+		}
+	}
 }
 .section-padding{
 	padding:5% 0;

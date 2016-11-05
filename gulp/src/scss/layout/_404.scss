@@ -5,11 +5,14 @@
 		border:1px solid $main_black;
 		text-align: center;
 		padding:20px;
-		.error-404-header{
+		.border{
+			border:1px solid $main_black;
+			width: 50px;
+			margin:15px auto;
+		}
+		a{
+			color:$main_black;
 			font-weight:bold;
-			margin:0;
-			letter-spacing:1px;
-			text-transform:uppercase;
 		}
 	}
 }
