@@ -1,9 +1,11 @@
 #searchform{
-	width: 60%;
+	width: 80%;
 	margin:30px auto;
 	position:relative;
-	// padding:10px;
 	border:1px solid $secondary_grey;
+	@include breakpoint(large){
+		width: 60%;
+	}
 	&::after{
 		font-family:'FontAwesome';
 		content:'\f002';
