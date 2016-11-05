@@ -7,6 +7,11 @@
 	text-transform:uppercase;
 	display: inline-block;
 	text-align: center;
+	transition:0.5s;
+	&:hover{
+		color:white;
+		background: $main_black;
+	}
 	.post &{
 		margin-top:10px;
 	}
