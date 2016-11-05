@@ -163,7 +163,7 @@ function van_page_header(){
 				<h1><?php the_title(); ?></h1>
 
 				<?php if ( $page_header_subtitle ){ ?>
-					<p><?php echo esc_html( $page_header_subtitle ); ?></p>
+					<p class="playfair-display"><?php echo esc_html( $page_header_subtitle ); ?></p>
 				<?php } ?>
 			</header>
 		</div>

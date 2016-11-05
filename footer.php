@@ -17,7 +17,7 @@
 		<div class="site-info">
 			<div class="row">
 				<div class="columns small-12">
-					<p><?php esc_html_e( '&#169;2016 Vandesign. All rights reserved.', 'van' ); ?></p>
+					<p class="playfair-display"><?php esc_html_e( '&#169;2016 Vandesign. All rights reserved.', 'van' ); ?></p>
 					<?php van_social_media(); ?>
 				</div>
 			</div>

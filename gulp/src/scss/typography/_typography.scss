@@ -13,34 +13,32 @@ h1{
 		@include font-size(50);
 	}
 }
+h3{
+	.error-404 &{
+		text-transform: uppercase;
+	}
+}
 p{
+	&.playfair-display{
+		font-family:'Playfair Display', sans-serif;
+		letter-spacing:1px;
+	}
 	.front-page-hero &{
-		font-family:'Playfair Display', sans-serif;		
+		font-family:'Playfair Display', sans-serif;	
+		letter-spacing:1px;	
 	}
 	.page-header &{
-		font-family:'Playfair Display', sans-serif;
 		color:white;
-		letter-spacing:1px;
 		margin:0;
 	}
 	.site-footer &{
 		@include font-size(14);
-		font-family:'Playfair Display', sans-serif;
-		letter-spacing:1px;
 		margin:0;
-	}
-	&.error-404-header{
-		font-weight:bold;
-		margin-top:0;
-		letter-spacing:1px;
-		text-transform:uppercase;
 	}
 	.page-content &{
 		.error-404 &{
 			margin:0;
 			&:last-of-type{
-				font-family:'Playfair Display', sans-serif;
-				letter-spacing:1px;
 				color:$main_grey;
 			}
 		}
