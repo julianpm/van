@@ -173,11 +173,9 @@ function van_page_header(){
 
 
 // BLOG ARCHIVE HEADER
-function van_blog_header(){
+function van_page_header_simple(){ ?>
 
-	$page_header_subtitle = get_field( 'van_page_header_subtitle' ); ?>
-
-	<header class="blog-header">
+	<header class="page-header-simple">
 		<div class="row">
 			<div class="columns small-12">
 				<h1><?php single_post_title(); ?></h1>
