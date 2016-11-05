@@ -20,16 +20,10 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header class="blog-header">
-					<div class="row">
-						<div class="columns small-12">
-							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-						</div>
-					</div>
-				</header>
+			if ( is_home() && ! is_front_page() ) :
 
-			<?php
+				van_blog_header();
+			
 			endif; ?>
 
 			<div class="row section-padding" id="post-list">

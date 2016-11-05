@@ -152,21 +152,39 @@ function van_post_navigation() {
 
 
 // PAGE HEADER (SITE-WIDE)
-function van_page_header(){ ?>
+function van_page_header(){
+
+	$page_header_subtitle = get_field( 'van_page_header_subtitle' ); ?>
+
 	<div class="row">
 		<div class="columns small-12">
 			<header class="page-header" style="background-image: url( <?php echo ( has_post_thumbnail() ? wp_get_attachment_url( get_post_thumbnail_id() ) : '' ); ?> ); ">
+				
 				<h1><?php the_title(); ?></h1>
 
-				<?php
-				$page_header_subtitle = get_field( 'van_page_header_subtitle' );
-
-				if ( $page_header_subtitle ){ ?>
+				<?php if ( $page_header_subtitle ){ ?>
 					<p><?php echo esc_html( $page_header_subtitle ); ?></p>
 				<?php } ?>
 			</header>
 		</div>
 	</div>
+
+<?php }
+
+
+// BLOG ARCHIVE HEADER
+function van_blog_header(){
+
+	$page_header_subtitle = get_field( 'van_page_header_subtitle' ); ?>
+
+	<header class="blog-header">
+		<div class="row">
+			<div class="columns small-12">
+				<h1><?php single_post_title(); ?></h1>
+			</div>
+		</div>
+	</header>
+
 <?php }
 
 
