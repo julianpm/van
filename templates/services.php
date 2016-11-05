@@ -15,6 +15,7 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
+				// CUSTOM PAGE HEADER WITH HERO IMAGE
 				van_page_header();
 
 			endwhile; // End of the loop.

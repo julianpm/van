@@ -19,11 +19,10 @@ get_header(); ?>
 
 						get_template_part( 'template-parts/content', 'single' );
 
-						#the_post_navigation();
-
 					endwhile; // End of the loop.
-					?>
-					<?php van_post_navigation(); ?>
+			
+					// CUSTOM SINGLE POST NAVIGATION
+					van_post_navigation(); ?>
 				</div>
 				<div class="columns small-12 large-4">
 					<?php get_sidebar(); ?>

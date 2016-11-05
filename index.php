@@ -22,6 +22,7 @@ get_header(); ?>
 
 			if ( is_home() && ! is_front_page() ) :
 
+				// PAGE HEADER W/O HERO IMAGE
 				van_page_header_simple();
 			
 			endif; ?>
