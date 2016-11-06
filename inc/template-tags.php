@@ -189,11 +189,19 @@ function van_page_header_simple(){ ?>
 // PAGE CONTENT (SITE-WIDE)
 function van_page_content(){ ?>
 
-	<div class="row">
-		<div class="columns small-12">
-			<?php the_content(); ?>
+	<section class="page-content">
+		<div class="row section-padding">
+			<?php if ( !is_front_page() ){ ?>
+				<div class="columns small-12 large-6 large-centered">
+					<?php the_content(); ?>
+				</div>
+			<?php } else{ ?>
+				<div class="columns small-12 large-10">
+					<?php the_content(); ?>
+				</div>
+			<?php } ?>
 		</div>
-	</div>
+	</section>
 
 <?php }
 
