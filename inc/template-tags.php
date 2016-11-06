@@ -321,7 +321,8 @@ function van_notices(){
 			<?php foreach ( $notices as $notice ){
 				$notices_title = $notice['van_notices_title'];
 				$notices_info = $notice['van_notices_info'];
-				$notices_link = $notice['van_notices_link']; ?>
+				$notices_link = $notice['van_notices_link'];
+				$notices_link_text = $notice['van_notices_link_text']; ?>
 
 				<div class="columns small-12 large-6">
 					<div class="card">
@@ -332,7 +333,7 @@ function van_notices(){
 							echo wp_kses_post( $notices_info );
 						}
 						if ( $notices_link){ ?>
-							<a class="btn" href="#"><?php echo esc_html( $notices_link ); ?></a>
+							<a class="btn" href="<?php echo esc_url( '/'.$notices_link ); ?>"><?php echo esc_html( $notices_link_text ); ?></a>
 						<?php } ?>
 					</div>
 				</div>
