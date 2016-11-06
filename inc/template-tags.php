@@ -192,7 +192,7 @@ function van_page_content(){ ?>
 	<section class="page-content">
 		<div class="row section-padding">
 			<?php if ( !is_front_page() ){ ?>
-				<div class="columns small-12 large-6 large-centered">
+				<div class="columns small-12 large-8 large-centered">
 					<?php the_content(); ?>
 				</div>
 			<?php } else{ ?>
