@@ -241,3 +241,106 @@ function van_social_media() {
 		</nav>
 	<?php }
 }
+
+
+// SERVICES REPEATER
+function van_services() {
+	if ( function_exists( 'get_field') ){
+		$services = get_field( 'van_services' );
+
+		if ( $services ){ ?>
+
+			<section class="row section-padding">
+
+			<?php foreach ( $services as $service ){
+				$services_icon = $service['van_services_icon'];
+				$services_title = $service['van_services_title'];
+				$services_info = $service['van_services_info']; ?>
+
+				<div class="columns small-12 large-4">
+					<div class="box">
+						<?php if ( $services_icon ){ ?>
+							<i class="fa fa-<?php echo esc_html( $services_icon ); ?>"></i>
+						<?php }
+						if ( $services_title ){ ?>
+							<h3><?php echo esc_html( $services_title ); ?></h3>
+						<?php }
+						if ( $services_info ){
+							echo wp_kses_post( $services_info );	
+						} ?>
+					</div>
+				</div>
+
+			<?php } ?>
+				
+			</section>
+
+		<?php }
+	}
+}
+
+
+// SERVICES WP_QUERY
+function van_services_wp_query(){ ?>
+
+	<section class="section-padding">
+
+		<?php
+		$args = array(
+			'post_type' => 'page',
+			'pagename' => 'services',
+			'posts_per_page' => -1
+		);
+		$services = new WP_Query( $args );
+
+		if ( $services->have_posts() ) :
+		?>
+			<?php
+				while ( $services->have_posts() ) : $services->the_post(); ?>
+
+					<?php van_services(); ?>
+
+				<?php endwhile; wp_reset_postdata();
+			?>
+		<?php endif; ?>
+
+	</section>
+
+<?php }
+
+
+// NOTICES REPEATER
+function van_notices(){
+	if ( function_exists( 'get_field' ) ){
+		$notices = get_field( 'van_notices' );
+
+		if ( $notices ){ ?>
+
+			<section class="row">
+				
+			<?php foreach ( $notices as $notice ){
+				$notices_title = $notice['van_notices_title'];
+				$notices_info = $notice['van_notices_info'];
+				$notices_link = $notice['van_notices_link']; ?>
+
+				<div class="columns small-12 large-6">
+					<div class="card">
+						<?php if ( $notices_title ){ ?>
+							<h3><?php echo esc_html( $notices_title ); ?></h3>
+						<?php }
+						if ( $notices_info ){
+							echo wp_kses_post( $notices_info );
+						}
+						if ( $notices_link){ ?>
+							<a class="btn" href="#"><?php echo esc_html( $notices_link ); ?></a>
+						<?php } ?>
+					</div>
+				</div>
+
+			<?php } ?>
+
+			</section>
+
+		<?php }
+	}
+} 
