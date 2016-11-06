@@ -8,6 +8,7 @@
 	display: inline-block;
 	text-align: center;
 	transition:0.5s;
+	text-decoration: none;
 	&:hover{
 		color:white;
 		background: $main_black;
