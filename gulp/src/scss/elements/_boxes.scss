@@ -2,6 +2,10 @@
 	border:1px solid $secondary_grey;
 	padding:20px;
 	position:relative;
+	margin-bottom:20px;
+	@include breakpoint(large){
+		margin-bottom:0;
+	}
 	i{
 		@include font-size(24);
 		position:absolute;
