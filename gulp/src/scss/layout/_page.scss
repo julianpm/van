@@ -14,3 +14,26 @@
 	background: $main_black;
 	padding:10px 0;
 }
+
+.page-content{
+	text-align: center;
+	.home &{
+		text-align: left;
+		h2{
+			margin:0;
+		}
+		p{
+			margin-bottom:0;
+		}
+		a{
+			font-family:'Playfair Display', sans-serif;
+			text-decoration:none;
+			color:$main_grey;
+			border-bottom:1px solid $main_black;
+			transition:0.5s;
+			&:hover{
+				color:$main_black;
+			}
+		}
+	}
+}
