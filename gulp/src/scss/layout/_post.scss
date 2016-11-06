@@ -10,6 +10,7 @@
 		a{
 			position:relative;
 			color:$main_black;
+			text-decoration: none;
 			&::before{
 				content:'';
 				position: absolute;
