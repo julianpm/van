@@ -15,6 +15,7 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
+				// PAGE CONTENT
 				van_page_content();
 			
 			endwhile; // End of the loop.
