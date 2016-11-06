@@ -17,7 +17,10 @@ get_header(); ?>
 
 				// PAGE CONTENT
 				van_page_content();
-			
+
+				// SERVICES WP QUERY
+				van_services_wp_query();
+
 			endwhile; // End of the loop.
 			?>
 
