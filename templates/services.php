@@ -21,6 +21,9 @@ get_header(); ?>
 				// PAGE CONTENT
 				van_page_content();
 
+				// SERVICES
+				van_services();
+
 			endwhile; // End of the loop.
 			?>
 
