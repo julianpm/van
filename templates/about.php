@@ -21,6 +21,9 @@ get_header(); ?>
 				// PAGE CONTENT
 				van_page_content();
 
+				// NOTICES REPEATER
+				van_notices();
+
 			endwhile; // End of the loop.
 			?>
 
