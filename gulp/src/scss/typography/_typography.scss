@@ -13,20 +13,16 @@ h1{
 		@include font-size(50);
 	}
 }
+h2{
+	font-family:'Playfair Display', sans-serif;
+	font-weight:400;
+}
 h3{
 	.error-404 &{
 		text-transform: uppercase;
 	}
 }
 p{
-	&.italic{
-		font-family:'Playfair Display', sans-serif;
-		letter-spacing:1px;
-	}
-	.front-page-hero &{
-		font-family:'Playfair Display', sans-serif;	
-		letter-spacing:1px;	
-	}
 	.page-header &{
 		color:white;
 		margin:0;
@@ -43,6 +39,10 @@ p{
 			}
 		}
 	}
+}
+.italic{
+	font-family:'Playfair Display', sans-serif;
+	letter-spacing:1px;
 }
 .section-padding{
 	padding:5% 0;
