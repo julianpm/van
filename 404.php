@@ -22,7 +22,7 @@ get_header(); ?>
 								<p><?php esc_html_e( 'Apologies, but the page you requested could not be found.', 'van' ); ?></p>
 								<p><?php esc_html_e( 'Perhaps searching will help.', 'van'); ?></p>
 								<?php get_search_form(); ?>
-								<p class="playfair-display">Back to <a href="<?php echo esc_url( home_url() ); ?>">home</a> or <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">contact us</a></p>
+								<p class="italic">Back to <a href="<?php echo esc_url( home_url() ); ?>">home</a> or <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">contact us</a></p>
 							</div><!-- .page-content -->
 						</section><!-- .error-404 -->
 					</div>
