@@ -1,0 +1,12 @@
+.card{
+	border:1px solid $secondary_grey;
+	padding:20px;
+	text-align: center;
+	margin-bottom:20px;
+	@include breakpoint(large){
+		margin-bottom:0;
+	}
+	hr{
+		width: 50px;
+	}
+}
