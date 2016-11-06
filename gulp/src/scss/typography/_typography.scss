@@ -6,7 +6,6 @@ h1{
 	font-weight:500;
 	color:white;
 	text-transform:uppercase;
-	margin:0;
 	@include font-size(30);
 	@include breakpoint(large){
 		@include font-size(50);
@@ -17,6 +16,9 @@ h2{
 	font-weight:400;
 	width:75%;
 	margin:0 auto;
+	.home &{
+		width: 100%;
+	}
 }
 h3{
 	font-weight:600;
@@ -27,14 +29,11 @@ h3{
 p{
 	.page-header &{
 		color:white;
-		margin:0;
 	}
 	.site-footer &{
 		@include font-size(14);
-		margin:0;
 	}
 	.page-content &{
-		margin-bottom:0;
 		.error-404 &{
 			margin:0;
 			&:last-of-type{
