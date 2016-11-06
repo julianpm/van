@@ -21,6 +21,9 @@ get_header(); ?>
 				// SERVICES WP QUERY
 				van_services_wp_query();
 
+				// NOTICES REPEATER
+				van_notices();
+
 			endwhile; // End of the loop.
 			?>
 
