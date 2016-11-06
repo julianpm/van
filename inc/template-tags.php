@@ -163,7 +163,7 @@ function van_page_header(){
 				<h1><?php the_title(); ?></h1>
 
 				<?php if ( $page_header_subtitle ){ ?>
-					<p class="playfair-display"><?php echo esc_html( $page_header_subtitle ); ?></p>
+					<p class="italic"><?php echo esc_html( $page_header_subtitle ); ?></p>
 				<?php } ?>
 			</header>
 		</div>
@@ -172,7 +172,7 @@ function van_page_header(){
 <?php }
 
 
-// BLOG ARCHIVE HEADER
+// PAGE HEADER SIMPLE (SITE-WIDE)
 function van_page_header_simple(){ ?>
 
 	<header class="page-header-simple">
@@ -182,6 +182,18 @@ function van_page_header_simple(){ ?>
 			</div>
 		</div>
 	</header>
+
+<?php }
+
+
+// PAGE CONTENT (SITE-WIDE)
+function van_page_content(){ ?>
+
+	<div class="row">
+		<div class="columns small-12">
+			<?php the_content(); ?>
+		</div>
+	</div>
 
 <?php }
 

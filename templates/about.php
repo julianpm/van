@@ -18,6 +18,9 @@ get_header(); ?>
 				// CUSTOM PAGE HEADER WITH HERO IMAGE
 				van_page_header();
 
+				// PAGE CONTENT
+				van_page_content();
+
 			endwhile; // End of the loop.
 			?>
 
