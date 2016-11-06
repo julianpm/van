@@ -344,4 +344,37 @@ function van_notices(){
 
 		<?php }
 	}
-} 
+}
+
+function van_map(){
+	if ( function_exists( 'get_field' ) ){
+		$map = get_field( 'van_map' );
+
+		if ( $map ){ ?>
+
+			<section class="row section-padding">
+				<div class="columns small-12">
+					<img src="<?php echo esc_url( $map ); ?>" alt="Map">
+				</div>
+			</section>
+
+		<?php }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

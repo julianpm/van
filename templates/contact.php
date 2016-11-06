@@ -21,6 +21,9 @@ get_header(); ?>
 				// PAGE CONTENT
 				van_page_content();
 
+				// MAP
+				van_map();
+
 			endwhile; // End of the loop.
 			?>
 
