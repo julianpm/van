@@ -316,7 +316,7 @@ function van_notices(){
 
 		if ( $notices ){ ?>
 
-			<section class="row">
+			<section class="row section-padding">
 				
 			<?php foreach ( $notices as $notice ){
 				$notices_title = $notice['van_notices_title'];
