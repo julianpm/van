@@ -362,3 +362,33 @@ function van_map(){
 		<?php }
 	}
 }
+
+
+// CONTACT INFO (CONTACT PAGE)
+function van_contact_info(){
+	$telephone_number = get_field( 'van_telephone_number' );
+	$address = get_field( 'van_address' );
+	$email = get_field( 'van_email' ); ?>
+
+	<section class="row section-padding contact-info">
+		<div class="columns small-12 large-3">
+			<i class="fa fa-phone" aria-hidden="true"></i>
+			<?php if ( $telephone_number ){ ?>
+				<p class="italic"><?php echo esc_html( $telephone_number ); ?></p>
+			<?php } ?>
+		</div>
+		<div class="columns small-12 large-6">
+			<i class="fa fa-map-marker" aria-hidden="true"></i>
+			<?php if ( $address ){ ?>
+				<p class="italic"><?php echo esc_html( $address ); ?></p>
+			<?php } ?>
+		</div>
+		<div class="columns small-12 large-3">
+			<i class="fa fa-envelope" aria-hidden="true"></i>
+			<?php if ( $email ){ ?>
+				<p class="italic"><?php echo esc_html( $email ); ?></p>
+			<?php } ?>
+		</div>
+	</section>
+
+<?php }
