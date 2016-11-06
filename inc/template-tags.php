@@ -243,7 +243,7 @@ function van_social_media() {
 }
 
 
-// SERVICES REPEATER
+// SERVICES REPEATER (SERVICES)
 function van_services() {
 	if ( function_exists( 'get_field') ){
 		$services = get_field( 'van_services' );
@@ -280,7 +280,7 @@ function van_services() {
 }
 
 
-// SERVICES WP_QUERY
+// SERVICES WP_QUERY (FRONT PAGE)
 function van_services_wp_query(){ ?>
 
 	<section class="section-padding">
@@ -309,7 +309,7 @@ function van_services_wp_query(){ ?>
 <?php }
 
 
-// NOTICES REPEATER
+// NOTICES REPEATER (FRONT PAGE AND ABOUT)
 function van_notices(){
 	if ( function_exists( 'get_field' ) ){
 		$notices = get_field( 'van_notices' );
@@ -346,6 +346,7 @@ function van_notices(){
 	}
 }
 
+// MAP (CONTACT PAGE)
 function van_map(){
 	if ( function_exists( 'get_field' ) ){
 		$map = get_field( 'van_map' );
@@ -361,20 +362,3 @@ function van_map(){
 		<?php }
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
