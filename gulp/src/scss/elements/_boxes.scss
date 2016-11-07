@@ -6,9 +6,16 @@
 	@include breakpoint(large){
 		margin-bottom:0;
 	}
+	img{
+		margin-bottom:20px;
+	}
 	i{
 		@include font-size(24);
 		position:absolute;
 		top:-10px;
+	}
+	.page-template-about &{
+		text-align: center;
+		border:none;
 	}
 }

@@ -29,8 +29,16 @@ h3{
 	font-weight:600;
 	text-transform: uppercase;
 	margin-top:0;
+	letter-spacing:0.5px;
 	.box &{
 		border-bottom:2px solid $main_black;
+		.page-template-about &{
+			border-bottom:none;
+			margin-bottom:5px;
+		}
+	}
+	.cta &{
+		color:white;
 	}
 }
 p{
@@ -55,6 +63,16 @@ p{
 	}
 	.contact-info &{
 		margin-bottom:0;
+	}
+	.cta &{
+		color:$main_grey;
+		width: 70%;
+		margin:0 auto;
+	}
+	.box &{
+		.page-template-about &{
+			margin:0;
+		}
 	}
 }
 .italic{

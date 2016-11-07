@@ -21,6 +21,12 @@ get_header(); ?>
 				// PAGE CONTENT
 				van_page_content();
 
+				// OUR TEAM HEADER
+				van_our_team_header();
+
+				// OUR TEAM REPEATER
+				van_our_team();
+
 				// NOTICES REPEATER
 				van_notices();
 

@@ -392,3 +392,63 @@ function van_contact_info(){
 	</section>
 
 <?php }
+
+
+// OUR TEAM HEADER (ABOUT PAGE)
+function van_our_team_header(){
+	$our_team_header_icon = get_field( 'van_our_team_header_icon' );
+	$our_team_header_title = get_field( 'van_our_team_header_title' );
+	$our_team_header_info = get_field( 'van_our_team_header_info'); ?>
+
+	<section class="row section-padding">
+		<div class="columns small-12">
+			<div class="cta">
+				<?php if ( $our_team_header_icon ){ ?>
+					<img src="<?php echo esc_url( $our_team_header_icon ); ?>" alt="Team Icon">
+				<?php }
+				if ( $our_team_header_title ){ ?>
+					<h3><?php echo esc_html( $our_team_header_title ); ?></h3>
+				<?php }
+				if ( $our_team_header_info ){
+					echo wp_kses_post( $our_team_header_info );
+				} ?>
+			</div>
+		</div>
+	</section>
+
+<?php }
+
+
+// OUR TEAM REPEATER (ABOUT PAGE)
+function van_our_team(){
+	if ( function_exists( 'get_field' ) ){
+		$our_team = get_field( 'van_our_team' );
+
+		if ( $our_team ){ ?>
+
+			<section class="row">
+				
+				<?php foreach ( $our_team as $our_team_item ){
+					$our_team_image = $our_team_item['van_our_team_image'];
+					$our_team_name = $our_team_item['van_our_team_name'];
+					$our_team_position = $our_team_item['van_our_team_position']; ?>
+
+					<div class="columns small-12 large-3 box">
+						<?php if ( $our_team_image ){ ?>
+							<img src="<?php echo esc_url( $our_team_image ); ?>" alt="Team Member Headshot">
+						<?php }
+						if ( $our_team_name ){ ?>
+							<h3><?php echo esc_html( $our_team_name ); ?></h3>
+						<?php }
+						if ( $our_team_position ){ ?>
+							<p class="italic"><?php echo esc_html( $our_team_position ); ?></p>
+						<?php } ?>
+					</div>
+
+				<?php } ?>
+
+			</section>
+
+		<?php }
+	}
+}
