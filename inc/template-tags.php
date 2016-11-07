@@ -460,4 +460,29 @@ function van_our_team(){
 }
 
 
-// 
+// CLIENTS REPEATER
+function van_clients(){
+	if ( function_exists( 'get_field' ) ){
+		$clients = get_field( 'van_clients' );
+
+		if ( $clients ){ ?>
+
+			<section class="row section-padding clients">
+				<h3><?php esc_html_e( 'We Have Worked With', 'van' ); ?></h3>
+				<div class="border"></div>
+
+				<?php foreach ( $clients as $client ){
+					$client_logo = $client['van_clients_logo']; ?>
+
+					<div class="columns small-12 large-2">
+						<?php if ( $client_logo ){ ?>
+							<img src="<?php echo esc_url( $client_logo ); ?>" alt="Client Logo">
+						<?php } ?>
+					</div>
+
+				<?php } ?>
+			</section>	
+
+		<?php }
+	}
+}

@@ -24,6 +24,9 @@ get_header(); ?>
 				// SERVICES
 				van_services();
 
+				// CLIENTS
+				van_clients();
+
 			endwhile; // End of the loop.
 			?>
 

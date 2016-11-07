@@ -40,6 +40,9 @@ h3{
 	.cta &{
 		color:white;
 	}
+	.clients &{
+		text-align: center;
+	}
 }
 p{
 	.page-header &{
@@ -82,4 +85,9 @@ p{
 	@include breakpoint(large){
 		padding:2% 0;
 	}
+}
+.border{
+	border-bottom:2px solid $main_black;
+	width:50px;
+	margin:0 auto;
 }
