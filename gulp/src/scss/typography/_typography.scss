@@ -32,10 +32,10 @@ h3{
 	letter-spacing:0.5px;
 	.box &{
 		border-bottom:2px solid $main_black;
-		.page-template-about &{
-			border-bottom:none;
-			margin-bottom:5px;
-		}
+	}
+	.box-simple &{
+		border-bottom:none;
+		margin:0;
 	}
 	.cta &{
 		color:white;
@@ -69,10 +69,8 @@ p{
 		width: 70%;
 		margin:0 auto;
 	}
-	.box &{
-		.page-template-about &{
-			margin:0;
-		}
+	.box-simple &{
+		margin:5px 0 0 0;
 	}
 }
 .italic{

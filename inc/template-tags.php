@@ -433,7 +433,7 @@ function van_our_team(){
 					$our_team_name = $our_team_item['van_our_team_name'];
 					$our_team_position = $our_team_item['van_our_team_position']; ?>
 
-					<div class="columns small-12 large-3 box">
+					<div class="columns small-12 large-3 box box-simple">
 						<?php if ( $our_team_image ){ ?>
 							<img src="<?php echo esc_url( $our_team_image ); ?>" alt="Team Member Headshot">
 						<?php }
@@ -452,3 +452,6 @@ function van_our_team(){
 		<?php }
 	}
 }
+
+
+// 
