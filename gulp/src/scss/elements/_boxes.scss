@@ -17,5 +17,10 @@
 	&.box-simple{
 		text-align: center;
 		border:none;
+		i{
+			border-bottom:1px solid $main_black;
+			padding:0 10px 10px 10px;
+			position:inherit;
+		}
 	}
 }
