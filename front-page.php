@@ -19,7 +19,7 @@ get_header(); ?>
 				van_page_content();
 
 				// SERVICES WP QUERY
-				van_services_wp_query();
+				van_services();
 
 				// NOTICES REPEATER
 				van_notices();
