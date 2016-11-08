@@ -21,6 +21,9 @@ get_header(); ?>
 				// PAGE CONTENT
 				van_page_content();
 
+				// COMPANY HISTORY REPEATER
+				van_history();
+
 				// OUR TEAM HEADER
 				van_our_team_header();
 
