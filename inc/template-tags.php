@@ -401,6 +401,24 @@ function van_contact_info(){
 <?php }
 
 
+// CONTACT TEXT (CONTACT)
+function van_contact_text(){
+	if ( function_exists( 'get_field' ) ){
+		$contact_text = get_field( 'van_contact_text' );
+
+		if ( $contact_text ){ ?>
+
+			<section class="row section-padding">
+				<div class="columns small-12 large-10 large-centered">
+					<?php echo wp_kses_post( $contact_text ); ?>
+				</div>
+			</section>
+
+		<?php }
+	}
+}
+
+
 // OUR TEAM HEADER (ABOUT PAGE)
 function van_our_team_header(){
 	$our_team_header_icon = get_field( 'van_our_team_header_icon' );
