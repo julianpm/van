@@ -1,0 +1,10 @@
+.history{
+	display: flex;
+	flex-wrap:wrap;
+	.columns{
+		display: flex;
+		img{
+			width: 100%;
+		}
+	}
+}
