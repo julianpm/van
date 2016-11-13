@@ -16,7 +16,7 @@ h2{
 	font-family:'Playfair Display', sans-serif;
 	font-weight:400;
 	width:75%;
-	margin:0 auto;
+	margin:2.5% auto 0 auto;
 	.home &{
 		width: 100%;
 	}
@@ -90,4 +90,7 @@ p{
 	border-bottom:2px solid $main_black;
 	width:50px;
 	margin:0 auto;
+}
+.item{
+	margin-bottom:20px;
 }
