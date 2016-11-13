@@ -468,7 +468,7 @@ function van_history(){
 
 		if ( $history ){ ?>
 
-			<section class="row section-padding">
+			<section class="row section-padding history">
 				
 				<?php foreach ( $history as $history_item ){
 					$content_choice = $history_item['van_content_choice'];
@@ -476,24 +476,25 @@ function van_history(){
 					$about_history_title = $history_item['van_about_history_title'];
 					$about_history_info = $history_item['van_about_history_info']; ?>
 					
-					<div>
-						<?php if ( $content_choice == "Image" ){
-							if ( $about_history_image ){ ?>
+					<?php if ( $content_choice == "Image" ){
+						if ( $about_history_image ){ ?>
+							<div class="columns small-12 large-4 item">
 								<img src="<?php echo esc_url( $about_history_image ); ?>" alt="">
-							<?php }
-						} elseif ( $content_choice == "Text" ){ ?>
-							<div class="box">
-								<?php if ( $about_history_title ){ ?>
-									<h3><?php echo esc_html( $about_history_title ); ?></h3>
-								<?php }
-								if ( $about_history_info ){
-									echo wp_kses_post( $about_history_info );
-								} ?>
 							</div>
-						<?php } ?>
-					</div>
-
-				<?php } ?>
+						<?php }
+					} elseif ( $content_choice == "Text" ){
+						if ( $about_history_title ){ ?>
+							<div class="columns small-12 large-4 item">
+								<div class="box">
+									<h3><?php echo esc_html( $about_history_title ); ?></h3>
+									<?php if ( $about_history_info ){
+										echo wp_kses_post( $about_history_info );
+									} ?>
+								</div>
+							</div>
+						<?php }
+					}
+				} ?>
 
 			</section>
 
@@ -501,7 +502,7 @@ function van_history(){
 	}
 }
 
-
+					
 // CLIENTS REPEATER (SERVICES)
 function van_clients(){
 	if ( function_exists( 'get_field' ) ){
