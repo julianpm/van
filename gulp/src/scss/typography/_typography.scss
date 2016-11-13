@@ -90,6 +90,9 @@ p{
 	border-bottom:2px solid $main_black;
 	width:50px;
 	margin:0 auto;
+	.projects &{
+		border-bottom:2px solid white;
+	}
 }
 .item{
 	margin-bottom:20px;
