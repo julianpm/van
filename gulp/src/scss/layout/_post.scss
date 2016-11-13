@@ -87,4 +87,8 @@
 			}
 		}
 	}
+	.single &{
+		border-top:1px solid $secondary_grey;
+		border-bottom:1px solid $secondary_grey;
+	}
 }
