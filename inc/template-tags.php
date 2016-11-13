@@ -257,7 +257,7 @@ function van_services() {
 				$services_title = $service['van_services_title'];
 				$services_info = $service['van_services_info']; ?>
 
-				<div class="columns small-12 large-4">
+				<div class="columns small-12 large-4 item">
 					<div class="box">
 						<?php if ( $services_icon ){ ?>
 							<i class="fa fa-<?php echo esc_html( $services_icon ); ?>"></i>
