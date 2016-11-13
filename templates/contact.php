@@ -21,8 +21,8 @@ get_header(); ?>
 				// CONTACT INFO
 				van_contact_info();
 
-				// PAGE CONTENT
-				van_page_content();
+				// CONTACT TEXT
+				van_contact_text();				
 
 				// MAP
 				van_map();
