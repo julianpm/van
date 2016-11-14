@@ -20,12 +20,21 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php van_posted_on();
-			van_entry_footer(); ?>
+			<div class="posted-on-wrapper">
+				<?php van_posted_on();
+				van_entry_footer(); ?>
+			</div>
+			<?php van_share(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
+
+	<div class="featured-image">
+		<?php if ( has_post_thumbnail() ){
+			the_post_thumbnail();
+		} ?>
+	</div>
 
 	<div class="entry-content">
 		<?php
