@@ -41,11 +41,27 @@
 		font-family:'Playfair Display';
 		color:$main_grey;
 		letter-spacing:1px;
+		display:flex;
+		justify-content:space-between;
+		.share{
+			p{
+				display:inline;
+				padding-right:5px;
+			}
+			a{
+				i{
+					color:$main_black;
+				}
+			}
+		}
 		a{
 			color: $main_grey;
 			letter-spacing:1px;
 			text-decoration: none;
 		}
+	}
+	.featured-image{
+		margin:30px 0;
 	}
 	.single-post &{
 		border-bottom:none;
