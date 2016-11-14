@@ -116,10 +116,14 @@ function van_post_navigation() {
 		<div class="columns small-12">	
 			<nav class="navigation posts-navigation" role="navigation">
 				<div class="nav-links section-padding">
-					<?php
-						previous_post_link( '<div class="nav-previous">%link</div>', 'Previous Post' );
-						next_post_link( '<div class="nav-next">%link</div>', 'Next Post' );
-					?>
+					<?php if ( is_singular( 'projects' ) ){
+						previous_post_link( '<div class="nav-previous">%link</div>', 'Previous Project' ); ?>
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/project-nav.jpg" alt="Project Nav Icon">
+						<?php next_post_link( '<div class="nav-next">%link</div>', 'Next Project' );
+					} else{
+						previous_post_link( '<div class="nav-previous">%link</div>', 'Previous Post' ); ?>
+						<?php next_post_link( '<div class="nav-next">%link</div>', 'Next Post' );
+					} ?>
 				</div><!-- .nav-links -->
 			</nav><!-- .navigation -->
 		</div>
@@ -570,3 +574,23 @@ function van_projects_archive_header(){
 
 	<?php }
 }
+
+
+// SINGLE PROJECT INFO
+function van_single_project_info(){
+	$project_info_skills = get_field( 'van_projects_skills' );
+	$project_info_client = get_field( 'van_projects_client' );
+
+	if ( $project_info_skills ){ ?>
+		<div class="single-project-info">
+			<?php echo wp_kses_post( $project_info_skills ); ?>
+		</div>
+	<?php }
+	if ( $project_info_client ){ ?>
+		<div class="single-project-info">
+			<?php echo wp_kses_post( $project_info_client ); ?>	
+		</div>
+	<?php } ?>
+	<a class="btn" href="#">Visit Site</a>
+
+<?php }
