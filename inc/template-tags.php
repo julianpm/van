@@ -524,3 +524,49 @@ function van_history(){
 		<?php }
 	}
 }
+
+
+// SHARE THIS (BLOG)
+function van_share(){ ?>
+
+	<div class="share">
+		<p>Share this:</p>
+		<a href="http://twitter.com/intent/tweet?status=<?php the_title(); ?>+<?php echo get_permalink(); ?>">
+			<i class="fa fa-twitter" aria-hidden="true"></i>
+			|
+		</a>
+		<a href="http://www.facebook.com/share.php?u=<?php echo get_permalink(); ?>&title=<?php the_title(); ?>">
+			<i class="fa fa-facebook" aria-hidden="true"></i>
+			|
+		</a>
+		<a href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>">
+			<i class="fa fa-google-plus" aria-hidden="true"></i>
+		</a>
+	</div>
+
+<?php }
+
+
+// PROJECTS ARCHIVE HEADER (PROJECTS)
+function van_projects_archive_header(){
+	$projects_image = get_field( 'van_projects_header_image', 'options' );
+	$projects_title = get_field( 'van_projects_header_title', 'options' );
+	$projects_subtitle = get_field( 'van_projects_header_subtitle', 'options' );
+
+	if ( $projects_image ){ ?>
+
+		<div class="row">
+			<div class="columns small-12">
+				<header class="page-header" style="background-image: url( <?php echo esc_url( $projects_image ); ?> ); ">
+					<?php if ( $projects_title ){ ?>
+						<h1><?php echo esc_html( $projects_title ); ?></h1>
+					<?php } ?>
+					<?php if ( $projects_subtitle ){ ?>
+						<p class="italic"><?php echo esc_html( $projects_subtitle ); ?></p>
+					<?php } ?>
+				</header>
+			</div>
+		</div>
+
+	<?php }
+}
