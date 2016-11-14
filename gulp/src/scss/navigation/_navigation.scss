@@ -12,6 +12,12 @@
 				display: flex;
 				justify-content:space-between;
 			}
+			.current-menu-item{
+				a{
+					color:$main_black;
+					border-bottom:2px solid $main_black;
+				}
+			}
 			a{
 				color:$main_grey;
 				text-decoration:none;
