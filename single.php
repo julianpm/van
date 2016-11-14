@@ -26,7 +26,6 @@ get_header(); ?>
 				</div>
 				<div class="columns small-12 large-4">
 					<?php get_sidebar(); ?>
-					
 				</div>
 			</div>
 
