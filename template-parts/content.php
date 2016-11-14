@@ -20,7 +20,8 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php van_posted_on(); ?>
+			<?php van_posted_on();
+			van_entry_footer(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -30,8 +31,4 @@
 		<?php the_excerpt(); ?>
 		<a class="btn" href="<?php the_permalink(); ?>"><?php echo esc_html( 'read more', 'pso' ); ?></a>
 	</div><!-- .entry-content -->
-
-	<!-- <footer class="entry-footer"> -->
-		<?php #van_entry_footer(); ?>
-	<!-- </footer>.entry-footer -->
 </article><!-- #post-## -->
