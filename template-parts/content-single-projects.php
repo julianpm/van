@@ -17,9 +17,10 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif; ?>
+		<div class="border"></div>
 	</header><!-- .entry-header -->
 
-	<div class="row">
+	<div class="row section-padding">
 		<div class="columns small-9">
 			<div class="entry-content">
 				<?php the_content(); ?>

@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
-		<div class="row section-padding">
+		<div class="row">
 			<div class="columns small-12">
 				<?php
 				while ( have_posts() ) : the_post();
