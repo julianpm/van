@@ -1,0 +1,30 @@
+.widget{
+	.widget-title{
+		text-transform: uppercase;
+		margin:60px 0 20px 0;
+	}
+	ul{
+		padding:0;
+		list-style-position: inside;
+		margin:0;
+		list-style: none;
+		li{
+			padding:10px 0;
+			border-bottom:1px solid $secondary_grey;
+			&::before{
+				content:'\f0c8';
+				font-family:'FontAwesome';
+				color:$secondary_grey;
+				@include font-size(14);
+				margin-right:10px;
+			}
+			&:last-of-type{
+				border-bottom:0;
+			}
+			a{
+				color:$main_grey;
+				text-decoration: none;
+			}
+		}
+	}
+}
