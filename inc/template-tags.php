@@ -25,7 +25,6 @@ function van_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'van' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -49,32 +48,10 @@ function van_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'van' ) );
 		if ( $categories_list && van_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'van' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
-
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'van' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'van' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( '/%1$s', 'van' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 	}
 
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'van' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
-		echo '</span>';
-	}
-
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'van' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
 }
 endif;
 
@@ -274,6 +251,34 @@ function van_services() {
 			<?php } ?>
 				
 			</section>
+
+		<?php }
+	}
+}
+
+
+// CLIENTS REPEATER (SERVICES)
+function van_clients(){
+	if ( function_exists( 'get_field' ) ){
+		$clients = get_field( 'van_clients' );
+
+		if ( $clients ){ ?>
+
+			<section class="row section-padding clients">
+				<h3><?php esc_html_e( 'We Have Worked With', 'van' ); ?></h3>
+				<div class="border"></div>
+
+				<?php foreach ( $clients as $client ){
+					$client_logo = $client['van_clients_logo']; ?>
+
+					<div class="columns small-12 large-2">
+						<?php if ( $client_logo ){ ?>
+							<img src="<?php echo esc_url( $client_logo ); ?>" alt="Client Logo">
+						<?php } ?>
+					</div>
+
+				<?php } ?>
+			</section>	
 
 		<?php }
 	}
@@ -515,34 +520,6 @@ function van_history(){
 				} ?>
 
 			</section>
-
-		<?php }
-	}
-}
-
-					
-// CLIENTS REPEATER (SERVICES)
-function van_clients(){
-	if ( function_exists( 'get_field' ) ){
-		$clients = get_field( 'van_clients' );
-
-		if ( $clients ){ ?>
-
-			<section class="row section-padding clients">
-				<h3><?php esc_html_e( 'We Have Worked With', 'van' ); ?></h3>
-				<div class="border"></div>
-
-				<?php foreach ( $clients as $client ){
-					$client_logo = $client['van_clients_logo']; ?>
-
-					<div class="columns small-12 large-2">
-						<?php if ( $client_logo ){ ?>
-							<img src="<?php echo esc_url( $client_logo ); ?>" alt="Client Logo">
-						<?php } ?>
-					</div>
-
-				<?php } ?>
-			</section>	
 
 		<?php }
 	}
