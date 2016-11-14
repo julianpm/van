@@ -93,6 +93,9 @@ p{
 	.projects &{
 		border-bottom:2px solid white;
 	}
+	.single-projects &{
+		border-bottom:2px solid $main_black;
+	}
 }
 .item{
 	margin-bottom:20px;
