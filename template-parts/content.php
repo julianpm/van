@@ -11,30 +11,26 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<div class="posted-on-wrapper">
-				<?php van_posted_on();
-				van_entry_footer(); ?>
-			</div>
-			<?php van_share(); ?>
-		</div><!-- .entry-meta -->
-		<?php
+		if ( 'post' === get_post_type() ) :
+			if ( ! is_singular( 'projects' ) ){ ?>
+				<div class="entry-meta">
+					<div class="posted-on-wrapper">
+						<?php van_posted_on();
+						van_entry_footer(); ?>
+					</div>
+					<?php van_share(); ?>
+				</div><!-- .entry-meta -->
+			<?php }
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="featured-image">
-		<?php if ( has_post_thumbnail() ){
-			the_post_thumbnail();
-		} ?>
-	</div>
+	<?php if ( has_post_thumbnail() ){ ?>
+		<div class="featured-image">
+			<?php the_post_thumbnail(); ?>
+		</div>
+	<?php } ?>
 
 	<div class="entry-content">
 		<?php the_excerpt(); ?>

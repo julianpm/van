@@ -32,4 +32,7 @@
 			<?php van_single_project_info(); ?>
 		</div>
 	</div>
+
+	<?php van_posts_query(); ?>
+
 </article><!-- #post-## -->
