@@ -127,6 +127,30 @@
 			margin-top:0;
 		}
 	}
+	.related-posts{
+		h2{
+			margin:0;
+			text-align: center;
+			width: 100%;
+			font-family:'Raleway', sans-serif;
+			padding-bottom:10px;
+		}
+	}
+	.type-post{
+		margin-top:30px;
+		padding-bottom:0;
+		border-bottom:none;
+		.entry-title{
+			text-align: left;
+			margin:0;
+			font-family:'Raleway', sans-serif;
+			@include font-size(20);
+			width: 100%;
+		}
+		.entry-content{
+			padding-top:10px;
+		}
+	}
 }
 
 .posts-navigation{
