@@ -101,7 +101,9 @@
 			width: 100%;
 			text-transform: uppercase;
 			@include font-size(16);
-			padding:10px 0;
+		}
+		.post-meta{
+			font-family:'Playfair Display', sans-serif;
 		}
 	}
 }
