@@ -45,6 +45,7 @@ h3{
 	}
 }
 p{
+	color:$main_grey;
 	.page-header &{
 		color:white;
 		margin:0;
@@ -59,16 +60,12 @@ p{
 	.page-content &{
 		.error-404 &{
 			margin:0;
-			&:last-of-type{
-				color:$main_grey;
-			}
 		}
 	}
 	.contact-info &{
 		margin-bottom:0;
 	}
 	.cta &{
-		color:$main_grey;
 		width: 70%;
 		margin:0 auto;
 	}
@@ -92,6 +89,12 @@ p{
 	margin:0 auto;
 	.projects &{
 		border-bottom:2px solid white;
+		&:first-of-type{
+			margin-bottom:10px;
+		}
+		&:last-of-type{
+			margin-top:10px;
+		}
 	}
 	.single-projects &{
 		border-bottom:2px solid $main_black;
