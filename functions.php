@@ -145,6 +145,9 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+// TAXONOMIES
+require get_template_directory() . '/inc/taxonomies.php';
+
 // OPTIONS PAGE
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
