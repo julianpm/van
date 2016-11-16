@@ -99,6 +99,19 @@ add_action( 'edit_category', 'van_category_transient_flusher' );
 add_action( 'save_post',     'van_category_transient_flusher' );
 
 
+// GET CATEGORY
+function pso_post_meta(){
+
+	if ('projects' == get_post_type() ){
+		$category = get_the_terms( get_the_ID(), 'service' );
+		if ( $category ){
+			echo '<span class="post-meta">'.esc_html( $category[0]->name ).'</span>';
+		}
+	} 
+
+}
+
+
 /**
  * Display navigation to next/previous post when applicable.
  * CUSTOM SINGLE-POST NAVIGATION

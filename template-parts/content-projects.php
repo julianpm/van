@@ -21,6 +21,7 @@
 		else :
 			the_title( '<h2 class="entry-title">', '</h2>' );
 		endif; ?>
+		<?php pso_post_meta(); ?>
 		<div class="border"></div>
 	</a>
 </article><!-- #post-## -->
