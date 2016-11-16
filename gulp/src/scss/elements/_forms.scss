@@ -30,3 +30,60 @@
 		width:100%;
 	}
 }
+
+
+// CONTACT FORM
+.wpcf7-form{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	p{
+		width: 31%;
+		font-family:'Playfair Display', sans-serif;
+		color:$main_grey;
+		span{
+			input{
+				width: 100%;
+				padding:8px 0;
+				margin-top:10px;
+				border:1px solid $secondary_grey;
+			}
+		}
+		&:nth-of-type(4){
+			width: 100%;
+			span{
+				textarea{
+					width: 100%;
+					border-radius:0;
+					border:1px solid $secondary_grey;
+					margin-top:10px;
+				}
+			}
+		}
+		&:last-of-type{
+			width: 100%;
+			text-align: right;
+			input{
+				background: white;
+				color:$main_black;
+				border:1px solid $main_black;
+				font-family:'Raleway';
+				height:40px;
+				line-height:40px;
+				padding:0 20px;
+				text-transform:uppercase;
+				display: inline-block;
+				text-align: center;
+				transition:0.5s;
+				text-decoration: none;
+				&:hover{
+					color:white;
+					background: $main_black;
+				}
+			}
+			.ajax-loader{
+				display: none;
+			}
+		}
+	}
+}
