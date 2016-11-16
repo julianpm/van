@@ -607,3 +607,36 @@ function van_single_project_info(){
 	<a class="btn" href="#">Visit Site</a>
 
 <?php }
+
+
+// POSTS WP QUERY SINGLE PROJECT
+function van_posts_query(){
+
+	$args = array(
+		'orderby'        => 'rand',
+		'posts_per_page' => '3',
+	);
+	
+	// the query
+	$related_posts = new WP_Query( $args ); ?>
+
+	<?php if ( $related_posts->have_posts() ) : ?>
+		<!-- pagination here -->
+		<div class="row section-padding related-posts">
+			<h2><?php echo esc_html_e( 'Maybe These Will Interest You', 'van' ); ?></h2>
+			<div class="border"></div>
+			<!-- the loop -->
+			<?php while ( $related_posts->have_posts() ) : $related_posts->the_post(); ?>
+				<div class="columns small-12 large-4">
+					<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				</div>
+			<?php endwhile; ?>
+			<!-- end of the loop -->
+		</div>
+		<!-- pagination here -->
+	
+		<?php wp_reset_postdata(); ?>
+	
+	<?php endif;
+
+}
