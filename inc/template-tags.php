@@ -310,7 +310,7 @@ function van_testimonials(){
 
 		if ( $testimonials ){ ?>
 
-			<section class="row section-padding testimonial">
+			<section class="row section-padding slider">
 				
 					<?php foreach ( $testimonials as $testimonial ){ 
 						$testimonial_quote = $testimonial['van_testimonial_quote'];
@@ -320,7 +320,7 @@ function van_testimonials(){
 						if ( $testimonial_quote ){ ?>
 
 							<div class="columns small-12">
-								<div class="testimonial-item">
+								<div class="slider-item">
 									<?php echo wp_kses_post( $testimonial_quote ); ?>
 									<div class="border"></div>
 									<?php if ( $testimonial_name ){ ?>
