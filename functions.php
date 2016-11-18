@@ -180,6 +180,6 @@ add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
  * @return int (Maybe) modified excerpt length.
  */
 function sas_excerpt_length( $length ) {
-    return 30;
+    return 20;
 }
 add_filter( 'excerpt_length', 'sas_excerpt_length', 999 );
