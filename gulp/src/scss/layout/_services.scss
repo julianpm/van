@@ -1,28 +1,3 @@
-.testimonial-item{
-	background: $main_black;
-	padding:40px;
-	color:white;
-	text-align: center;
-	font-family:'Playfair Display', sans-serif;
-	h3{
-		font-family:'Raleway', sans-serif;
-		margin-bottom:0;
-	}
-	p{
-		color:white;
-		&:first-of-type{
-			@include breakpoint(large){
-				width: 80%;
-				margin:0 auto;
-			}
-		}
-		&:last-of-type{
-			color:$main_grey;
-			margin:0;
-		}
-	}
-}
-
 .clients{
 	.columns{
 		margin-top:30px;
