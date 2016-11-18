@@ -20,7 +20,7 @@ h2{
 	.home &{
 		width: 100%;
 	}
-	.blog &{
+	.blog &, .category &{
 		width: 100%;
 		font-family:'Raleway';
 	}
@@ -101,5 +101,5 @@ p{
 	}
 }
 .item{
-	margin-bottom:20px;
+	margin-bottom:30px;
 }

@@ -153,6 +153,24 @@
 	}
 }
 
+.category{
+	.category-items{
+		display: flex;
+		flex-wrap:wrap;
+	}
+	.post{
+		padding-bottom:0;
+		border-bottom:0;
+		.entry-header{
+			a{
+				&::before{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
 .posts-navigation{
 	margin-top:20px;
 	h2{

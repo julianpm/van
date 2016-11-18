@@ -17,7 +17,7 @@ get_header(); ?>
 
 			van_projects_archive_header(); ?>
 
-			<div class="row section-padding">
+			<div class="row section-padding category-items">
 				
 				<?php
 				/* Start the Loop */
