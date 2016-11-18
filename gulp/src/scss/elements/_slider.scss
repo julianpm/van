@@ -24,13 +24,10 @@
 
 .slider-item{
 	background: $main_black;
-	padding:20px;
+	padding:40px;
 	color:white;
 	text-align: center;
 	font-family:'Playfair Display', sans-serif;
-	@include breakpoint(large){
-		padding:80px 50px;
-	}
 	h3{
 		font-family:'Raleway', sans-serif;
 		margin-bottom:0;
