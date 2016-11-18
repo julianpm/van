@@ -288,7 +288,7 @@ function van_clients(){
 				<?php foreach ( $clients as $client ){
 					$client_logo = $client['van_clients_logo']; ?>
 
-					<div class="columns small-12 large-2">
+					<div class="columns small-12 medium-6 large-2">
 						<?php if ( $client_logo ){ ?>
 							<img src="<?php echo esc_url( $client_logo['url'] ); ?>" alt="<?php echo $client_logo['alt']; ?>
 ">
