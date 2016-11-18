@@ -14,7 +14,7 @@
 		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
 		if ( 'post' === get_post_type() ) :
-			if ( ! is_singular( 'projects' ) ){ ?>
+			if ( ! is_singular( 'projects' ) && ! is_category() ){ ?>
 				<div class="entry-meta">
 					<div class="posted-on-wrapper">
 						<?php van_posted_on();
@@ -26,7 +26,7 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( ! is_singular( 'projects' ) ){
+	<?php if ( ! is_singular( 'projects' ) && ! is_category() ){
 		if ( has_post_thumbnail() ){ ?>
 			<div class="featured-image">
 				<?php the_post_thumbnail(); ?>
