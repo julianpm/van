@@ -24,6 +24,9 @@ get_header(); ?>
 				// SERVICES
 				van_services();
 
+				// TESTIMONIALS
+				van_testimonials();
+
 				// CLIENTS
 				van_clients();
 

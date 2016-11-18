@@ -303,6 +303,45 @@ function van_clients(){
 }
 
 
+// SERVICES TESTIMONIALS
+function van_testimonials(){
+	if ( function_exists( 'get_field' ) ){
+		$testimonials = get_field( 'van_testimonials' );
+
+		if ( $testimonials ){ ?>
+
+			<section class="row section-padding testimonial">
+				
+					<?php foreach ( $testimonials as $testimonial ){ 
+						$testimonial_quote = $testimonial['van_testimonial_quote'];
+						$testimonial_name = $testimonial['van_testimonial_name'];
+						$testimonial_title = $testimonial['van_testimonial_title'];
+
+						if ( $testimonial_quote ){ ?>
+
+							<div class="columns small-12">
+								<div class="testimonial-item">
+									<?php echo wp_kses_post( $testimonial_quote ); ?>
+									<div class="border"></div>
+									<?php if ( $testimonial_name ){ ?>
+										<h3><?php echo esc_html( $testimonial_name ); ?></h3>
+									<?php }
+									if ( $testimonial_title ){ ?>
+										<p><?php echo esc_html( $testimonial_title ); ?></p>
+									<?php } ?>
+								</div>
+							</div>
+
+						<?php }
+					} ?>
+
+			</section>
+
+		<?php }
+	}
+}
+
+
 // SERVICES WP_QUERY (FRONT PAGE)
 function van_services_wp_query(){ ?>
 
@@ -379,8 +418,7 @@ function van_map(){
 
 			<section class="row section-padding">
 				<div class="columns small-12">
-					<img src="<?php echo esc_url( $map['url'] ); ?>" alt="<?php echo $map['alt']; ?>
-">
+					<img src="<?php echo esc_url( $map['url'] ); ?>" alt="<?php echo $map['alt']; ?> ">
 				</div>
 			</section>
 
