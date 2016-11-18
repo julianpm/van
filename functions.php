@@ -172,3 +172,14 @@ function my_theme_archive_title( $title ) {
 }
  
 add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
+
+/**
+ * Filter the except length to 20 characters.
+ * TO GO IN FUNCTIONS.PHP
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function sas_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'sas_excerpt_length', 999 );
