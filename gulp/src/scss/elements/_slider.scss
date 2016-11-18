@@ -1,0 +1,48 @@
+.slider{
+	position:relative;
+	.slick-prev, .slick-next{
+		@include font-size(0);
+		&::before{
+			position:absolute;
+			font-family:'FontAwesome';
+			color:$main_grey;
+			z-index:1;
+			@include font-size(24);
+			bottom:90px;
+			
+		}
+	}
+	.slick-prev::before{
+		content:'\f0d9';
+		left:49%;
+	}
+	.slick-next::before{
+		content:'\f0da';
+		right:49%;
+	}
+}
+
+.slider-item{
+	background: $main_black;
+	padding:20px;
+	color:white;
+	text-align: center;
+	font-family:'Playfair Display', sans-serif;
+	@include breakpoint(large){
+		padding:80px 50px;
+	}
+	h3{
+		font-family:'Raleway', sans-serif;
+		margin-bottom:0;
+	}
+	p{
+		color:white;
+		&:first-of-type{
+			margin-top:0;
+		}
+		&:last-of-type{
+			color:$main_grey;
+			margin:0;
+		}
+	}
+}
