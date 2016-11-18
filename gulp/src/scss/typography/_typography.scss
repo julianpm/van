@@ -99,7 +99,14 @@ p{
 	.single-projects &{
 		border-bottom:2px solid $main_black;
 	}
+	.testimonial-item &{
+		margin:30px auto;
+		border-bottom:2px solid white;
+	}
 }
 .item{
 	margin-bottom:30px;
+	@include breakpoint(large){
+		margin-bottom:0;
+	}
 }
