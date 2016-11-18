@@ -290,7 +290,8 @@ function van_clients(){
 
 					<div class="columns small-12 large-2">
 						<?php if ( $client_logo ){ ?>
-							<img src="<?php echo esc_url( $client_logo ); ?>" alt="Client Logo">
+							<img src="<?php echo esc_url( $client_logo['url'] ); ?>" alt="<?php echo $client_logo['alt']; ?>
+">
 						<?php } ?>
 					</div>
 
@@ -378,7 +379,8 @@ function van_map(){
 
 			<section class="row section-padding">
 				<div class="columns small-12">
-					<img src="<?php echo esc_url( $map ); ?>" alt="Map">
+					<img src="<?php echo esc_url( $map['url'] ); ?>" alt="<?php echo $map['alt']; ?>
+">
 				</div>
 			</section>
 
@@ -451,7 +453,8 @@ function van_our_team_header(){
 		<div class="columns small-12">
 			<div class="cta">
 				<?php if ( $our_team_header_icon ){ ?>
-					<img src="<?php echo esc_url( $our_team_header_icon ); ?>" alt="Team Icon">
+					<img src="<?php echo esc_url( $our_team_header_icon['url'] ); ?>" alt="<?php echo $our_team_header_icon['alt']; ?>
+">
 				<?php }
 				if ( $our_team_header_title ){ ?>
 					<h3><?php echo esc_html( $our_team_header_title ); ?></h3>
@@ -482,7 +485,7 @@ function van_our_team(){
 
 					<div class="columns small-12 large-3 box box-simple">
 						<?php if ( $our_team_image ){ ?>
-							<img src="<?php echo esc_url( $our_team_image ); ?>" alt="Team Member Headshot">
+							<img src="<?php echo esc_url( $our_team_image['url'] ); ?>" alt="<?php echo esc_url( $our_team_image['alt'] ); ?>">
 						<?php }
 						if ( $our_team_name ){ ?>
 							<h3><?php echo esc_html( $our_team_name ); ?></h3>
@@ -515,11 +518,11 @@ function van_history(){
 					$about_history_image = $history_item['van_about_history_image'];
 					$about_history_title = $history_item['van_about_history_title'];
 					$about_history_info = $history_item['van_about_history_info']; ?>
-					
+
 					<?php if ( $content_choice == "Image" ){
 						if ( $about_history_image ){ ?>
 							<div class="columns small-12 large-4 item">
-								<img src="<?php echo esc_url( $about_history_image ); ?>" alt="">
+								<img src="<?php echo esc_url( $about_history_image['url'] ); ?>" alt="<?php echo $about_history_image['alt']; ?>">
 							</div>
 						<?php }
 					} elseif ( $content_choice == "Text" ){
