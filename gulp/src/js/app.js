@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 
 	//SLIDER
-	$('.testimonial').slick();
+	$('.slider').slick();
 
 });
