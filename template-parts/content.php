@@ -26,14 +26,18 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( has_post_thumbnail() ){ ?>
-		<div class="featured-image">
-			<?php the_post_thumbnail(); ?>
-		</div>
-	<?php } ?>
+	<?php if ( ! is_singular( 'projects' ) ){
+		if ( has_post_thumbnail() ){ ?>
+			<div class="featured-image">
+				<?php the_post_thumbnail(); ?>
+			</div>
+		<?php }
+	} ?>
 
 	<div class="entry-content">
-		<?php the_excerpt(); ?>
-		<a class="btn" href="<?php the_permalink(); ?>"><?php echo esc_html( 'read more', 'pso' ); ?></a>
+		<?php the_excerpt();
+		if ( ! is_singular( 'projects' ) ){ ?>
+			<a class="btn" href="<?php the_permalink(); ?>"><?php echo esc_html( 'read more', 'pso' ); ?></a>
+		<?php } ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
