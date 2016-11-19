@@ -31,12 +31,18 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/van-logo.png" alt="Van Logo">
 					</a>
 					<div class="header-right">
-						<i class="fa fa-bars" aria-hidden="true"></i>
+						<div class="menu-toggle">
+							<i class="fa fa-bars" aria-hidden="true"></i>
+							<i class="fa fa-times" aria-hidden="true"></i>
+						</div>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</div>
 				</div>
 			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+	<div class="flyout">
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+	</div>
 
 	<div id="content" class="site-content">
