@@ -1,6 +1,10 @@
 jQuery(document).ready(function($){
 
 	//SLIDER
-	$('.slider').slick();
+	$('.slider').slick({
+		dots:true,
+		arrows:false,
+		adaptiveHeight:true
+	});
 
 });
