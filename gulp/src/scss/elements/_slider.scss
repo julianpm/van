@@ -1,24 +1,46 @@
 .slider{
-	position:relative;
-	.slick-prev, .slick-next{
-		@include font-size(0);
-		&::before{
-			position:absolute;
-			font-family:'FontAwesome';
-			color:$main_grey;
-			z-index:1;
-			@include font-size(24);
-			bottom:90px;
-			
+	.slick-dots{
+		padding:0;
+		text-align: center;
+		margin-bottom:0;
+		li{
+			position:relative;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin:0 5px;
+			padding:0;
+			cursor:pointer;
+			vertical-align:middle;
+			&.slick-active{
+				button::before{
+					background-color: $main_black;
+				}
+			}
+			button{
+				@include font-size(0);
+				display: block;
+				width: 20px;
+				height: 20px;
+				padding:5px;
+				cursor:pointer;
+				outline: none;
+				background-color: transparent;
+				&::before{
+				    @include font-size(6);
+				    line-height: 20px;
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    width: 20px;
+				    height: 20px;
+				    content: '';
+				    border:1px solid $main_black;
+				    background-color: $main_grey;
+				    border-radius: 50%;
+				}
+			}
 		}
-	}
-	.slick-prev::before{
-		content:'\f0d9';
-		left:49%;
-	}
-	.slick-next::before{
-		content:'\f0da';
-		right:49%;
 	}
 }
 
