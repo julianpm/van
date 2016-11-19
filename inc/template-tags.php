@@ -343,32 +343,9 @@ function van_testimonials(){
 
 
 // SERVICES WP_QUERY (FRONT PAGE)
-function van_services_wp_query(){ ?>
-
-	<section class="section-padding">
-
-		<?php
-		$args = array(
-			'post_type' => 'page',
-			'pagename' => 'services',
-			'posts_per_page' => -1
-		);
-		$services = new WP_Query( $args );
-
-		if ( $services->have_posts() ) :
-		?>
-			<?php
-				while ( $services->have_posts() ) : $services->the_post(); ?>
-
-					<?php van_services(); ?>
-
-				<?php endwhile; wp_reset_postdata();
-			?>
-		<?php endif; ?>
-
-	</section>
-
-<?php }
+function van_services_wp_query(){
+	
+}
 
 
 // NOTICES REPEATER (FRONT PAGE AND ABOUT)
@@ -634,6 +611,7 @@ function van_projects_archive_header(){
 function van_single_project_info(){
 	$project_info_skills = get_field( 'van_projects_skills' );
 	$project_info_client = get_field( 'van_projects_client' );
+	$project_info_link = get_field( 'van_projects_link' );
 
 	if ( $project_info_skills ){ ?>
 		<div class="single-project-info">
@@ -644,10 +622,12 @@ function van_single_project_info(){
 		<div class="single-project-info">
 			<?php echo wp_kses_post( $project_info_client ); ?>	
 		</div>
-	<?php } ?>
-	<a class="btn" href="#">Visit Site</a>
+	<?php }
+	if ( $project_info_link ){ ?>
+		<a class="btn" href="<?php echo esc_html( $project_info_link ); ?>">Visit Site</a>
+	<?php }
 
-<?php }
+}
 
 
 // POSTS WP QUERY SINGLE PROJECT
