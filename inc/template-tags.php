@@ -387,7 +387,7 @@ function van_notices(){
 				$notices_link_text = $notice['van_notices_link_text']; ?>
 
 				<div class="columns small-12 large-6">
-					<div class="card">
+					<div class="card item">
 						<?php if ( $notices_title ){ ?>
 							<h3><?php echo esc_html( $notices_title ); ?></h3>
 						<?php }
