@@ -36,9 +36,6 @@ get_header(); ?>
 
 				endif; ?>
 				
-				<div class="columns small-12">
-					<?php the_posts_navigation(); ?>
-				</div>
 			</div>
 
 		</main><!-- #main -->
