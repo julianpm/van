@@ -342,12 +342,6 @@ function van_testimonials(){
 }
 
 
-// SERVICES WP_QUERY (FRONT PAGE)
-function van_services_wp_query(){
-	
-}
-
-
 // NOTICES REPEATER (FRONT PAGE AND ABOUT)
 function van_notices(){
 	if ( function_exists( 'get_field' ) ){
