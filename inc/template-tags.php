@@ -608,12 +608,14 @@ function van_single_project_info(){
 
 	if ( $project_info_skills ){ ?>
 		<div class="single-project-info">
-			<?php echo wp_kses_post( $project_info_skills ); ?>
+			<p><?php echo esc_html_e( 'Skills', 'van' ); ?></p>
+			<p><?php echo esc_html( $project_info_skills ); ?></p>
 		</div>
 	<?php }
 	if ( $project_info_client ){ ?>
 		<div class="single-project-info">
-			<?php echo wp_kses_post( $project_info_client ); ?>	
+			<p><?php echo esc_html_e( 'Clients', 'van' ); ?></p>
+			<p><?php echo esc_html( $project_info_client ); ?></p>
 		</div>
 	<?php }
 	if ( $project_info_link ){ ?>

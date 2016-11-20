@@ -120,6 +120,8 @@
 	.single-project-info{
 		p:first-of-type{
 			margin-bottom:0;
+			font-weight:600;
+			color:$main_black;
 		}
 		p:last-of-type{
 			font-family:'Playfair Display', sans-serif;
@@ -128,6 +130,7 @@
 		}
 	}
 	.related-posts{
+		margin-top:40px;
 		h2{
 			margin:0;
 			text-align: center;
@@ -212,12 +215,11 @@
 	.single-projects &{
 		border:none;
 		.nav-links{
-			width: 300px;
 			padding:0;
 			margin:0 auto;
 			display:flex;
 			align-items:center;
-			justify-content: initial;
+			justify-content: center;
 			position:relative;
 			left:-12px;
 			img{
