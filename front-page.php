@@ -21,6 +21,30 @@ get_header(); ?>
 				// SERVICES WP QUERY
 				van_services();
 
+				$args = array(
+					'post_type' 	 => 'projects',
+					'orderby'		 => 'rand',
+					'posts_per_page' => 6
+				);
+				// the query
+				$projects = new WP_Query( $args ); ?>
+
+				<?php if ( $projects->have_posts() ) : ?>
+					
+					<section class="row">
+				
+						<?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
+						
+						<div class="columns small-12 large-4">
+							<?php get_template_part( 'template-parts/content', 'projects' ); ?>
+						</div>
+
+						<?php endwhile;
+						wp_reset_postdata(); ?>
+					</section>
+				
+				<?php endif;
+
 				// NOTICES REPEATER
 				van_notices();
 
