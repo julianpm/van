@@ -70,9 +70,42 @@
 	}
 }
 
+.archive{
+	.project-options{
+		padding: 0;
+		list-style:none;
+		text-align: center;
+		margin-bottom:0;
+		li{
+			display: inline-block;
+			margin:0 10px;
+			a{
+				text-decoration: none;
+				color:$main_grey;
+				@include font-size(18);
+				transition:0.5s;
+				&:hover{
+					color:$main_black;
+				}
+			}
+		}
+	}
+	.projects-wrapper{
+		display: flex;
+		flex-wrap:wrap;
+		justify-content:space-between !important;
+		article{
+			width: 100%;
+			@include breakpoint(large){
+				width: 32%;
+			}
+		}
+	}
+}
+
 .archive .projects, .home .projects{
 	position:relative;
-	margin-bottom:30px;
+	margin-bottom:20px;
 	img{
 		width: 100%;
 	}
