@@ -8,9 +8,12 @@ jQuery(document).ready(function($){
 	});
 
 	// FLYOUT NAV CLICK FUNCTION
-	$('.menu-toggle').click(function(){
+	$('.header-right .fa-bars').click(function(){
 		$('.flyout').slideToggle();
 		$(this).toggleClass('active');
+		$(this).toggleClass('fa-bars fa-times');
 	});
+
+
 
 });

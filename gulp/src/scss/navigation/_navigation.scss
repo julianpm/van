@@ -7,23 +7,21 @@
 		.header-right{
 			display: flex;
 			align-items:center;
-			.menu-toggle{
-				cursor:pointer;
-				i{
-					@include font-size(30);
-					@include breakpoint(large){
-						display: none;
-					}
-				}
-				.fa-times{
+			cursor:pointer;
+			i{
+				@include font-size(30);
+				@include breakpoint(large){
 					display: none;
 				}
-				&.active{
-					.fa-times{
-						display: block;
-					}
-					.fa-bars{
+				&.fa-bars{
+					&.active{
 						display: none;
+					}
+				}
+				&.fa-times{
+					display: none;
+					&.active{
+						display: block;
 					}
 				}
 			}
