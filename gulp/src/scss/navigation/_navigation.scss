@@ -51,6 +51,9 @@
 	width: 100%;
 	z-index:1;
 	display: none;
+	@include breakpoint(large){
+		display: none !important;
+	}
 	#primary-menu{
 		display: block;
 		background: rgba(37,37,37,0.95);
