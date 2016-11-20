@@ -13,17 +13,6 @@
 				@include breakpoint(large){
 					display: none;
 				}
-				&.fa-bars{
-					&.active{
-						display: none;
-					}
-				}
-				&.fa-times{
-					display: none;
-					&.active{
-						display: block;
-					}
-				}
 			}
 		}
 	}
@@ -86,5 +75,3 @@
 		}
 	}
 }
-
-

@@ -31,7 +31,9 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/van-logo.png" alt="Van Logo">
 					</a>
 					<div class="header-right">
-						<i class="fa fa-bars" aria-hidden="true"></i>
+						<button>
+							<i class="fa fa-bars" aria-hidden="true"></i>
+						</button>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</div>
 				</div>
