@@ -65,3 +65,26 @@
 		}
 	}
 }
+
+.project-slider{
+	position:relative;
+	button{
+		@include font-size(0);
+		&::before{
+			font-family:'FontAwesome';
+			position:absolute;
+			z-index:1;
+			@include font-size(30);
+			bottom:70px;
+			color:#555;
+		}
+		&.slick-prev::before{
+			content:'\f0d9';
+			right:60px;
+		}
+		&.slick-next::before{
+			content:'\f0da';
+			right:40px;
+		}
+	}		
+}

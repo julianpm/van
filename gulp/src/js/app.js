@@ -7,6 +7,9 @@ jQuery(document).ready(function($){
 		adaptiveHeight:true
 	});
 
+	// PROJECT SLIDER
+	$('.project-slider').slick();
+
 	// FLYOUT NAV CLICK FUNCTION
 	$('.header-right button').click(function(){
 		$('.flyout').slideToggle();

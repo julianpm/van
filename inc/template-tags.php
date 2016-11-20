@@ -462,8 +462,7 @@ function van_our_team_header(){
 		<div class="columns small-12">
 			<div class="cta">
 				<?php if ( $our_team_header_icon ){ ?>
-					<img src="<?php echo esc_url( $our_team_header_icon['url'] ); ?>" alt="<?php echo $our_team_header_icon['alt']; ?>
-">
+					<img src="<?php echo esc_url( $our_team_header_icon['url'] ); ?>" alt="<?php echo $our_team_header_icon['alt']; ?>">
 				<?php }
 				if ( $our_team_header_title ){ ?>
 					<h3><?php echo esc_html( $our_team_header_title ); ?></h3>
@@ -621,6 +620,34 @@ function van_single_project_info(){
 		<a class="btn" href="<?php echo esc_html( $project_info_link ); ?>">Visit Site</a>
 	<?php }
 
+}
+
+
+// SINGLE PROJECT IMAGE REPEATER
+function van_project_image(){
+	if ( function_exists( 'get_field' ) ){
+		$project_images = get_field( 'van_project_images' );
+
+		if ( $project_images ){ ?>
+
+			<section class="row project-slider">
+				
+				<?php foreach ( $project_images as $project_image ){
+					$project_single_image = $project_image['van_project_single_image']; 
+
+					if ( $project_single_image ){ ?>
+
+						<div class="columns small-12">
+							<img src="<?php echo esc_url( $project_single_image['url'] ); ?>" alt="<?php echo esc_url( $project_single_image['alt'] ); ?>">							
+						</div>
+
+					<?php }
+				}?>
+
+			</section>
+
+		<?php }
+	}
 }
 
 
