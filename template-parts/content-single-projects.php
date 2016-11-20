@@ -20,15 +20,17 @@
 		<div class="border"></div>
 	</header><!-- .entry-header -->
 
-	<?php van_post_navigation(); ?>
+	<?php van_post_navigation();
+
+	van_project_image(); ?>
 
 	<div class="row section-padding">
-		<div class="columns small-9">
+		<div class="columns small-12 large-9">
 			<div class="entry-content">
 				<?php the_content(); ?>
 			</div><!-- .entry-content -->
 		</div>
-		<div class="columns small-3">
+		<div class="columns small-12 large-3">
 			<?php van_single_project_info(); ?>
 		</div>
 	</div>
