@@ -110,10 +110,10 @@
 
 .single-projects{
 	.entry-header{
+		text-align: center;
 		h1{
 			color:$main_black;
 			@include font-size(30);
-			text-align: center;
 			margin-bottom:10px;
 		}
 	}
