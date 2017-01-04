@@ -18,9 +18,10 @@ get_header(); ?>
 				// PAGE CONTENT
 				van_page_content();
 
-				// SERVICES WP QUERY
+				// SERVICES
 				van_services();
 
+				// PROJECTS WP QUERY
 				$args = array(
 					'post_type' 	 => 'projects',
 					'orderby'		 => 'rand',
