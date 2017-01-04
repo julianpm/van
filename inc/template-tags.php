@@ -240,7 +240,7 @@ function van_social_media() {
 // SERVICES REPEATER (SERVICES)
 function van_services() {
 	if ( function_exists( 'get_field') ){
-		$services = get_field( 'van_services', 17 );
+		$services = get_field( 'van_services' );
 
 		if ( $services ){ ?>
 
