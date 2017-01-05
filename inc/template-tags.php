@@ -240,7 +240,7 @@ function van_social_media() {
 // SERVICES REPEATER (SERVICES)
 function van_services() {
 	if ( function_exists( 'get_field') ){
-		$services = get_field( 'van_services' );
+		$services = get_field( 'van_services', 21 );
 
 		if ( $services ){ ?>
 
@@ -407,24 +407,24 @@ function van_contact_info(){
 	<section class="row section-padding">
 		<div class="columns small-12 large-3">
 			<div class="box box-simple">
-				<i class="fa fa-phone" aria-hidden="true"></i>
 				<?php if ( $telephone_number ){ ?>
+					<i class="fa fa-phone" aria-hidden="true"></i>
 					<p class="italic"><?php echo esc_html( $telephone_number ); ?></p>
 				<?php } ?>
 			</div>
 		</div>
 		<div class="columns small-12 large-6">
 			<div class="box box-simple">
-				<i class="fa fa-map-marker" aria-hidden="true"></i>
 				<?php if ( $address ){ ?>
+					<i class="fa fa-map-marker" aria-hidden="true"></i>
 					<p class="italic"><?php echo esc_html( $address ); ?></p>
 				<?php } ?>
 			</div>
 		</div>
 		<div class="columns small-12 large-3">
 			<div class="box box-simple">
-				<i class="fa fa-envelope" aria-hidden="true"></i>
 				<?php if ( $email ){ ?>
+					<i class="fa fa-envelope" aria-hidden="true"></i>
 					<p class="italic"><?php echo esc_html( $email ); ?></p>
 				<?php } ?>
 			</div>
