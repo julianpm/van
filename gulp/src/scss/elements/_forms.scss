@@ -52,6 +52,12 @@
 				border:1px solid $secondary_grey;
 				border-radius:0;
 			}
+			textarea{
+				height:200px;
+				@include breakpoint(large){
+					height:350px;
+				}
+			}
 		}
 		&:nth-of-type(4){
 			width: 100%;
