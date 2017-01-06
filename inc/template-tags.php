@@ -290,8 +290,7 @@ function van_clients(){
 
 					<div class="columns small-12 medium-6 large-2">
 						<?php if ( $client_logo ){ ?>
-							<img src="<?php echo esc_url( $client_logo['url'] ); ?>" alt="<?php echo $client_logo['alt']; ?>
-">
+							<img src="<?php echo esc_url( $client_logo['url'] ); ?>" alt="<?php echo $client_logo['alt']; ?>">
 						<?php } ?>
 					</div>
 
