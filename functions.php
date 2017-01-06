@@ -153,6 +153,7 @@ require get_template_directory() . '/inc/taxonomies.php';
 // OPTIONS PAGE
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page( 'Social Media Options' );
+	acf_add_options_page( 'Projects Archive Options' );
 }
 
 // REMOVES "ARCHIVE" LABEL FROM ANY CUSTOM POST ARCHIVE
