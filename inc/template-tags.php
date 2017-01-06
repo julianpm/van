@@ -585,7 +585,7 @@ function van_projects_archive_header(){
 
 		<div class="row">
 			<div class="columns small-12">
-				<header class="page-header" style="background-image: url( <?php echo esc_url( $projects_image ); ?> ); ">
+				<header class="page-header" style="background-image: url( <?php echo esc_url( $projects_image['url'] ); ?> );" alt="<?php echo $about_history_image['alt']; ?>">
 					<?php if ( $projects_title ){ ?>
 						<h1><?php echo esc_html( $projects_title ); ?></h1>
 					<?php } ?>
@@ -632,20 +632,20 @@ function van_project_image(){
 
 		if ( $project_images ){ ?>
 
-			<section class="row project-slider">
+			<section class="row">
+				<div class="columns small-12 project-slider">
 				
-				<?php foreach ( $project_images as $project_image ){
-					$project_single_image = $project_image['van_project_single_image']; 
+					<?php foreach ( $project_images as $project_image ){
+						$project_single_image = $project_image['van_project_single_image']; 
 
-					if ( $project_single_image ){ ?>
+						if ( $project_single_image ){ ?>
 
-						<div class="columns small-12">
-							<img src="<?php echo esc_url( $project_single_image['url'] ); ?>" alt="<?php echo esc_url( $project_single_image['alt'] ); ?>">							
-						</div>
+							<img src="<?php echo esc_url( $project_single_image['url'] ); ?>" alt="<?php echo esc_url( $project_single_image['alt'] ); ?>">						
 
-					<?php }
-				}?>
+						<?php }
+					}?>
 
+				</div>
 			</section>
 
 		<?php }
