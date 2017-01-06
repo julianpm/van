@@ -213,8 +213,6 @@
 		display: none;
 	}
 	.nav-links{
-		display:flex;
-		justify-content:space-between;
 		a{
 			color:$main_grey;
 			text-decoration: none;
@@ -239,6 +237,7 @@
 					margin-left:10px;
 				}
 			}
+			text-align: right;
 		}
 	}
 	.single &{
