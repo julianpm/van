@@ -24,45 +24,29 @@ get_header(); ?>
 				</header>
 	
 				<div class="row section-padding">
-					<div class="columns small-12">
 						
-						<?php
-						/* Start the Loop */
-						while ( have_posts() ) : the_post();
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) : the_post(); ?>
 
-							/**
-							 * Run the loop for the search to output the results.
-							 * If you want to overload this in a child theme then include a file
-							 * called content-search.php and that will be used instead.
-							 */
-							get_template_part( 'template-parts/content', 'search' );
-
-						endwhile;
-
-						the_posts_navigation(); ?>
-					
-					</div>
-				</div>
-
-			<?php else : ?>
-
-				<header class="page-header-simple">
-					<div class="row">
 						<div class="columns small-12">
-							<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'van' ); ?></h1>
+							
+							<?php get_template_part( 'template-parts/content', 'search' ); ?>
+
 						</div>
-					</div>
-				</header><!-- .page-header -->
 
-				<div class="row section-padding">
-					<div class="columns small-12">
+					<?php	
+					endwhile;
 
-						<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-					</div>
+					the_posts_navigation(); ?>
+					
 				</div>
-			
+
 			<?php
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
 			endif; ?>
 
 		</main><!-- #main -->
