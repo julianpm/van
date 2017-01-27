@@ -25,6 +25,7 @@ get_header(); ?>
 	
 				<div class="row section-padding">
 					<div class="columns small-12">
+						
 						<?php
 						/* Start the Loop */
 						while ( have_posts() ) : the_post();
@@ -38,11 +39,26 @@ get_header(); ?>
 
 						endwhile;
 
-						the_posts_navigation();
+						the_posts_navigation(); ?>
+					
+					</div>
+				</div>
 
-					else :
+			<?php else : ?>
 
-						get_template_part( 'template-parts/content', 'none' ); ?>
+				<header class="page-header-simple">
+					<div class="row">
+						<div class="columns small-12">
+							<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'van' ); ?></h1>
+						</div>
+					</div>
+				</header><!-- .page-header -->
+
+				<div class="row section-padding">
+					<div class="columns small-12">
+
+						<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
 					</div>
 				</div>
 			
@@ -53,5 +69,5 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-#get_sidebar();
+
 get_footer();

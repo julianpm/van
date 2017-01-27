@@ -10,14 +10,6 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header-simple">
-		<div class="row">
-			<div class="columns small-12">
-				<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'van' ); ?></h1>
-			</div>
-		</div>
-	</header><!-- .page-header -->
-
 	<div class="row section-padding">
 		<div class="columns small-12">
 			<div class="page-content">
