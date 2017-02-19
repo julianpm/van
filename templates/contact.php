@@ -30,9 +30,6 @@ get_header(); ?>
 				<!-- CONTACT TEXT -->
 				<?php van_contact_text();				
 
-				// MAP
-				van_map();
-
 			endwhile; // End of the loop.
 			?>
 
