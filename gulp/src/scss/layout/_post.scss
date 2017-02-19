@@ -38,9 +38,13 @@
 		font-family:'Playfair Display';
 		color:$main_grey;
 		letter-spacing:1px;
-		display:flex;
-		justify-content:space-between;
+		font-style:italic;
+		@include breakpoint(large){
+			display:flex;
+			justify-content:space-between;
+		}
 		.share{
+			margin-top:5px;
 			p{
 				display:inline;
 				padding-right:5px;
@@ -134,6 +138,7 @@
 		}
 		.post-meta{
 			font-family:'Playfair Display', sans-serif;
+			font-style:italic;
 		}
 	}
 }
