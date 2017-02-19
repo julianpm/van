@@ -17,7 +17,7 @@
 		<div class="site-info">
 			<div class="row">
 				<div class="columns small-12">
-					<p class="italic"><?php esc_html_e( '&#169;2016 Vandesign. All rights reserved.', 'van' ); ?></p>
+					<p class="italic">© <?php echo date( 'Y' ); ?> - <?php echo esc_html_e( 'Savour', 'svr' ); ?></p>
 					<?php van_social_media(); ?>
 				</div>
 			</div>
