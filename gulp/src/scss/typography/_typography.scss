@@ -52,10 +52,6 @@ p{
 	}
 	.site-footer &{
 		@include font-size(14);
-		margin-top:0;
-		@include breakpoint(large){
-			margin:0;
-		}
 	}
 	.page-content &{
 		.error-404 &{
