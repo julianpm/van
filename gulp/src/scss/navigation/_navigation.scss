@@ -56,18 +56,19 @@
 	width: 100%;
 	z-index:1;
 	display: none;
+	top:90px;
 	@include breakpoint(large){
 		display: none !important;
 	}
 	#primary-menu{
 		display: block;
-		background: rgba(37,37,37,0.95);
+		background: rgba(37,37,37,1);
 		margin:0;
 		padding:20px;
 		text-align: center;
 		@include font-size(20);
 		li{
-			margin-bottom:10px;
+			margin-bottom:20px;
 			&:last-of-type{
 				margin-bottom:0;
 			}
