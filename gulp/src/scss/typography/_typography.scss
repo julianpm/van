@@ -15,13 +15,8 @@ h1{
 h2{
 	font-family:'Playfair Display', sans-serif;
 	font-weight:400;
-	width:75%;
 	margin:2.5% auto 0 auto;
-	.home &{
-		width: 100%;
-	}
 	.blog &, .category &{
-		width: 100%;
 		font-family:'Raleway';
 	}
 }
